@@ -1,0 +1,269 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Orbitron&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.938rem;
+    background-color: hsl(220, 100%, 97%);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2479d4;
+    box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3); 
+    z-index: 100;
+}
+
+.nav {
+    height: 3.5rem;
+}
+
+.nav_logo,
+.nav_burger,
+.nav_close {
+    color: #fff;
+}
+
+.nav_data {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_logo {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.25rem;
+}
+
+.nav_data a {
+    font-weight: 600;
+}
+
+.nav_logo img {
+    width: 58px;
+}
+
+.nav_toggler {
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.nav_burger,
+.nav_close {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    inset: 0;
+    margin: auto;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: opacity .1s, transform .4s;
+}
+
+.nav_close {
+    opacity: 0;
+}
+
+@media screen and (max-width: 1118px) {
+    .nav_menu {
+        position: absolute;
+        left: 0;
+        top: 2.5rem;
+        width: 100%;
+        height: calc(100vh - 3.5rem);
+        overflow: auto;
+        pointer-events: none;
+        opacity: 0; 
+        transition: top 0.4s, opacity .3s;
+    }
+    .nav_menu::-webkit-scrollbar {
+        width: 0;
+    }
+    .nav_list {
+        background-color: #2479d4;
+        padding-top: 1rem;
+    }
+ }
+
+ .nav_link {
+    color: #fff;
+    font-weight: 600;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color .3s;
+ }
+
+ .nav_link:hover {
+    background-color: hsl(211, 55%, 55%);
+ }
+
+ .show-menu {
+    opacity: 1;
+    top: 3.5rem;
+    pointer-events: initial;
+ }
+
+ .dropdown_item {
+    cursor: pointer;
+ }
+
+ .dropdown_arrow {
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: transform .4s;
+ }
+
+ .dropdown_link, .dropdown_sublink {
+    padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+    color: #fff;
+    background-color: #1f6ec2;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-weight: 600;
+    transition: background-color .3s;
+ }
+
+ .dropdown_sublink i {
+    font-size: 1.25rem;
+    font-weight: 600;
+ }
+
+ .dropdown_link:hover, .dropdown_sublink:hover {
+    background-color: #2479d4;
+ }
+
+ .dropdown_menu, .dropdown_submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease-out;
+ }
+
+ .dropdown_item:hover .dropdown_menu, .dropdown_subitem:hover > .dropdown_submenu {
+    max-height: 1000px;
+    transition: max-height .4s ease-in;
+ }
+
+ .dropdown_item:hover .dropdown_arrow {
+    transform: rotate(180deg);
+ }
+ 
+ .dropdown_add {
+    margin-left: auto;
+ }
+
+ .dropdown_sublink {
+    background-color: #1f6ec2;
+ }
+
+ @media screen and (max-width: 340px) {
+    .container {
+        margin-inline: 1rem;
+    }
+
+    .nav_link {
+        padding-inline: 1rem;
+    }
+ }
+
+ @media screen and (min-width: 1118px) {
+    .container {
+        margin-inline: auto;
+    }
+
+    .nav {
+        height: calc(3.5rem + 2rem);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav_toggler {
+        display: none;
+    }
+
+    .nav_list {
+        height: 100%;
+        display: flex;
+        column-gap: 3rem;
+    }
+
+    .nav_link {
+        height: 100%;
+        padding: 0;
+        justify-content: initial;
+        column-gap: .25rem;
+    }
+
+    .nav_link:hover {
+        background-color: transparent;
+    }
+
+    .dropdown_item, .dropdown_subitem {
+        position: relative;
+    }
+
+    .dropdown_menu, .dropdown_submenu {
+        max-height: initial;
+        overflow: initial;
+        position: absolute;
+        left: 0;
+        top: 6rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .3s top .3s;
+    }
+
+    .dropdown_link, .dropdown_sublink {
+        padding-inline: 1rem 3.5rem;
+    }
+
+    .dropdown_subitem .dropdown_link {
+        padding-inline: 1rem;
+    }
+
+    .dropdown_submenu {
+        left: 100%;
+        position: absolute;
+        top: 0.5rem;
+    }
+
+    .dropdown_item:hover .dropdown_menu {
+        opacity: 1;
+        top: 5.5rem;
+        pointer-events: initial;
+        transition: top 0.3s;
+    }
+
+    .dropdown_subitem:hover > .dropdown_submenu {
+        opacity: 1;
+        top: 0;
+        pointer-events: initial;
+        transition: top 0.3s;
+
+    }
+ }
