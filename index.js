@@ -1,4 +1,4 @@
-const showMenu = (toggleId, navId) => {
+const showMenu = (toggleId, navId, sectionId) => {
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
 
@@ -7,4 +7,5 @@ const showMenu = (toggleId, navId) => {
         toggle.classList.toggle('show-icon')
     })
 }
-showMenu('nav-toggler', 'nav-menu')
+showMenu('nav-toggler', 'nav-menu');
+
