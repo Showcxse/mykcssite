@@ -8,4 +8,3 @@ const showMenu = (toggleId, navId, sectionId) => {
     })
 }
 showMenu('nav-toggler', 'nav-menu');
-
