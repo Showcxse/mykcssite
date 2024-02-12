@@ -123,11 +123,14 @@ a {
         padding-top: var(--header-height);
     }
 
-
-
     .about_card {
         max-width: 200px;
     }
+
+    .announcement_section {
+        padding-top: var(--header-height);
+    }
+    
  }
 
 
@@ -227,6 +230,10 @@ a {
         margin-left: 20px;
         margin-bottom: 20px;
     }
+    .resource_wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
 
 
  }
@@ -241,6 +248,8 @@ a {
         margin-left: 20px;
         margin-bottom: 20px;
     }
+
+
  }
 
  @media screen and (min-width: 768px) {
@@ -339,6 +348,21 @@ a {
 
     .about_card:last-child {
         grid-column: unset;
+    }
+
+    .announcement_section {
+        padding-top: calc(var(--header-height) + 2rem) !important;
+    }
+
+    .announcement_card_container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+    .announcement_card {
+        max-width: none;
     }
 }
 
@@ -566,4 +590,123 @@ a {
     color: black;
     border-color: black;
     cursor: pointer;
+}
+
+
+
+/*ANNOUNCEMENT PAGE STYLES*/
+
+.announcements_banner {
+    background: linear-gradient(var(--darker-blue-color), var(--light-blue-color));
+    position: relative;
+    align-self: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3); 
+}
+
+.announcements_banner h2 {
+    color: var(--white-color);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.announcement_img {
+    max-width: 380px;
+    max-height: 380px;
+    border-radius: 8px;
+}
+
+.announcement_col {
+    display: flex;
+    flex-direction: column;
+}
+
+.announcement_col h4 {
+    font-size: 1.5rem;
+    color: var(--darker-blue-color);
+}
+
+.announcement_col li {
+    font-size: 1.2rem;
+    margin-top: 16px;
+}
+
+.announcement_col li a {
+    color: var(--blue-color)
+}
+.announcement_col li a:hover {
+    transition: 0.3s ease-in;
+    color: var(--darker-blue-color);
+    border-bottom: 1px solid var(--blue-color);
+}
+
+
+.resources_container {
+    text-align: center;
+}
+
+.resources_container p {
+    font-size: 0.938rem;
+    opacity: 0.6;
+}
+
+.archived_announcement_container {
+    text-align: center;
+}
+
+.announcement_card_container {
+    padding: 4rem;
+    display: grid;
+    grid-template-rows: auto auto; 
+    gap: 20px;
+    justify-content: center;    
+}
+
+.announcement_card {
+    background-color: var(--white-color);
+    margin-inline: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1.4rem;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    color:#000;
+    max-width: 420px;
+    word-wrap: break-word;
+    margin-bottom: 40px;
+}
+
+.announcement_card:hover {
+    transition: 0.3s ease-out;
+    scale: 1.05;
+    border-color: var(--blue-color);
+}
+
+.announcement_card span {
+    /*fuck this shit im not doing this much detail unless I'm paid */
+}
+
+.large_card {
+    grid-row: span 2;
+    height: 480px;
+    max-width: 340px;
+}
+
+.large_card h4 {
+    text-align: center;
+}
+
+.small_card {
+    height: 240px;
+}
+
+.resource_wrapper {
+    padding: 2.4rem;
+    display: flex;
+    justify-content: space-evenly;
 }
