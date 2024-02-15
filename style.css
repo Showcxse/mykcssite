@@ -127,7 +127,7 @@ a {
         max-width: 200px;
     }
 
-    .announcement_section {
+     .banner {
         padding-top: var(--header-height);
     }
     
@@ -592,11 +592,7 @@ a {
     cursor: pointer;
 }
 
-
-
-/*ANNOUNCEMENT PAGE STYLES*/
-
-.announcements_banner {
+.announcements_banner, .banner {
     background: linear-gradient(var(--darker-blue-color), var(--light-blue-color));
     position: relative;
     align-self: center;
@@ -610,10 +606,14 @@ a {
     box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3); 
 }
 
-.announcements_banner h2 {
+.announcements_banner h2, .banner h2 {
     color: var(--white-color);
     font-size: 3rem;
     text-align: center;
+}
+
+.banner {
+    padding-top: var(--header-height);
 }
 
 .announcement_img {
@@ -687,21 +687,17 @@ a {
     border-color: var(--blue-color);
 }
 
-.announcement_card span {
-    /*fuck this shit im not doing this much detail unless I'm paid */
-}
-
-.large_card {
+.large_announcement_card {
     grid-row: span 2;
     height: 480px;
     max-width: 340px;
 }
 
-.large_card h4 {
+.large_announcement_card h4 {
     text-align: center;
 }
 
-.small_card {
+.small_announcement_card {
     height: 240px;
 }
 
@@ -709,4 +705,119 @@ a {
     padding: 2.4rem;
     display: flex;
     justify-content: space-evenly;
+}
+
+.staff_card_container, .card_container {
+    display: flex;
+    padding: 4rem;
+    justify-content: space-eve;
+    flex-wrap: wrap;
+}
+
+.support_staff_container {
+    column-gap: 0.5rem;
+}
+
+.staff_card {
+    height: 350px;
+    width: 350px;
+}
+
+ .card {
+    background-color: var(--white-color);
+    margin-inline: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    color:#000;
+    word-wrap: break-word;
+    margin-bottom: 40px;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.45s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.small_card {
+    background-color: var(--white-color);
+    margin-inline: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    color:#000;
+    word-wrap: break-word;
+    margin-bottom: 40px;
+    position: relative;
+    width: 260px;
+    max-width: 100%;
+    max-height: 100%;
+    height: 260px;
+    transition: all 0.45s ease;
+    text-align: center;
+}
+
+.small_staff_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.staff_card:hover, .card:hover, .small_card:hover {
+    border-color: var(--blue-color);
+}
+
+.card_front, .card_back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    padding: 12px;
+}
+
+.staff_card_back, .card_back {
+    transform: rotateY(180deg);
+}
+
+.flip_card {
+    transform: rotateY(180deg);
+}
+
+.staff_card img {
+    border-radius: 8px;
+    width: 220px;
+}
+
+.small_staff_card img {
+    border-radius: 8px;
+    width: 140px;
+}
+
+.staff_card h3, .small_staff_card h3 {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+.staff_card h4, .small_staff_card h4 {
+    font-weight: 600;
+    color: var(--blue-color)
+}
+
+.staff_card p, .small_staff_card p {
+    font-size: 0.88rem;
+}
+
+.support_staff_header {
+    font-size: 2rem;
+    text-align: center;
 }

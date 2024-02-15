@@ -1,4 +1,4 @@
-const showMenu = (toggleId, navId, sectionId) => {
+const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
 
@@ -8,3 +8,12 @@ const showMenu = (toggleId, navId, sectionId) => {
     })
 }
 showMenu('nav-toggler', 'nav-menu');
+
+
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('flip_card')
+    })
+});
+
