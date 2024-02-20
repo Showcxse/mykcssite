@@ -456,7 +456,6 @@ a {
     text-align: center;
     justify-content: center;
     align-items: center;
-
  }
 
  .about_header {
@@ -508,6 +507,36 @@ a {
 .about_symbol {
     color: #2196f3;
     font-size: 2.7rem;
+}
+
+.academic_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.75rem;
+}
+
+.academic_container i {
+    font-size: 4rem;
+}
+
+.quote {
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+.academic_text {
+    color: #000;
+    word-wrap: break-word;
+    font-size: 1.2rem;
+    margin: auto 10%;
+}
+
+.academic_btn {
+    margin-top: 40px;
+    margin-bottom: 120px;
+    width: 250px;
 }
 
 .footer_section {
