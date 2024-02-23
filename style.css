@@ -40,10 +40,6 @@ a {
     height: 1000px;
 }
 
-.pdf_container embed {
-    border: 4px solid #2a2a2e;
-}
-
 .header {
     position: fixed;
     top: 0;
@@ -138,6 +134,10 @@ a {
 
      .banner {
         padding-top: var(--header-height);
+    }
+
+    .app_btn_container {
+        flex-direction: column;
     }
     
  }
@@ -435,6 +435,7 @@ a {
     padding-top: 2rem;
  }
 
+
  .btn {
     border: var(--blue-color) 3px solid;
     padding: 1rem;
@@ -471,6 +472,7 @@ a {
     font-size: 3rem;
     margin-top: 3.2rem;
     position: relative;
+    color: #2196f3
  }
 
  .about_card h2 {
@@ -524,6 +526,7 @@ a {
     justify-content: center;
     align-items: center;
     gap: 2.75rem;
+    margin-inline: 4rem;
 }
 
 .academic_container i {
@@ -859,4 +862,60 @@ a {
 .support_staff_header {
     font-size: 2rem;
     text-align: center;
+}
+
+.academic_container h3, .academic_container p, .academic_container h4 {
+    text-align: center;
+}
+
+.app_info {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #444444
+}
+
+.smaller_text {
+    font-size: 1.05rem;
+}
+
+.enroll_info {
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.app_btn {
+    width: 450px;
+}
+
+#enroll-bottom {
+    font-size: 1rem;
+    color: var(--blue-color);
+    font-weight: 700;
+}
+
+.wide_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white-color);
+    margin-inline: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1.4rem;
+    border-radius: 36px;
+    color:#000;
+    max-width: 1200px;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap: 1.25rem;
+    border: 2px solid transparent;
+}
+
+.wide_card:hover {
+    border-color: var(--blue-color);
+    transition: 0.2s ease-out;
+}
+
+.wide_card img {
+    max-width: 100%;
 }
