@@ -22,6 +22,10 @@ body {
     font-weight: 400;
 }
 
+.centered_text {
+    text-align: center;
+}
+
 ul {
     list-style: none;
 }
@@ -244,7 +248,6 @@ a {
         gap: 2rem;
     }
 
-
  }
 
  @media screen and (max-width: 768px) {
@@ -269,6 +272,7 @@ a {
     .about_card:last-child {
         grid-column: span 2;
     }
+
 }
 
 
@@ -918,4 +922,68 @@ a {
 
 .wide_card img {
     max-width: 100%;
+}
+
+.content_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.75rem;
+    padding: 3.8rem;
+}
+
+.employment_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white-color);
+    margin-inline: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1.4rem;
+    border-radius: 36px;
+    color:#000;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap: 1.25rem;
+    border: 2px solid transparent;
+}
+
+.employment_card h3 {
+    font-size: 2rem;
+    color: var(--blue-color)
+}
+
+.employment_card img {
+    width: 240px;
+    height: 240px;
+}
+
+.card_text_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.card_text_container ul, .card_text_container ul li {
+    text-align: center;
+}
+
+.card_text_container h4 {
+    font-size: 1.28rem;
+}
+
+.card_text_container a {
+    color: var(--darker-blue-color);
+}
+
+.card_text_container a:hover {
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+.card_text_container p {
+    font-weight: 600;
 }
