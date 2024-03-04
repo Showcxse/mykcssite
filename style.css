@@ -221,6 +221,76 @@ a {
     background-color: var(--darker-blue-color);
  }
 
+ .table_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.table_container h4 {
+    padding: 2rem 1rem;
+    font-size: 2rem;
+}
+
+.board_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.board_table thead {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+.board_table thead tr th {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    letter-spacing: 0.05rem;
+    vertical-align: top;
+    border: 1px solid #aab7b8;
+    font-weight: 700;
+}
+
+.board_table tbody tr td {
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    border: 1px solid  #aab7b8;
+    padding: 0.8rem;
+    text-align: center;
+}
+
+.board_table tbody tr td a {
+    color: var(--blue-color);
+}
+
+.board_table tbody tr td a:hover {
+    text-decoration: underline;
+}
+
+.tbl tr:nth-child(even) {
+    background-color: #e2e2e2;
+}
+
+.board_minute_archive_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.board_minute_archive_container a {
+    color: var(--blue-color);
+}
+
+.board_minute_archive_container a:hover {
+    text-decoration: underline;
+}
+
+
  @media screen and (max-width: 600px) {
     .container {
         margin-inline: 1rem;
@@ -248,6 +318,14 @@ a {
         gap: 2rem;
     }
 
+    .board_minute_archive_container {
+        flex-direction: column;
+    }
+
+    .wide_card {
+        width: 100%;
+    }
+
  }
 
  @media screen and (max-width: 768px) {
@@ -259,6 +337,36 @@ a {
     .footer_col ul {
         margin-left: 20px;
         margin-bottom: 20px;
+    }
+
+
+    .board_table thead {
+        display: none;
+    }
+
+    .board_table tr,
+    .board_table td {
+        display: block;
+        width: 100%;
+    }
+
+    .board_table tr {
+        margin-bottom: 1rem;
+    }
+
+    .board_table tbody tr td {
+        text-align: right;
+        position: relative;
+        font-size: 0.8rem;
+    }
+
+    .board_table td::before {
+        content: attr(tbl_lbl);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 0.3rem;
+        text-align: left;
     }
 
 
@@ -891,6 +999,10 @@ a {
     width: 450px;
 }
 
+.board_btn {
+    width: 100%;
+}
+
 #enroll-bottom {
     font-size: 1rem;
     color: var(--blue-color);
@@ -987,3 +1099,11 @@ a {
 .card_text_container p {
     font-weight: 600;
 }
+
+.section_header {
+    margin-inline: 4rem;
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
