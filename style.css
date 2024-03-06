@@ -471,9 +471,7 @@ a {
         grid-column: unset;
     }
 
-    .announcement_section {
-        padding-top: calc(var(--header-height) + 2rem) !important;
-    }
+
 
     .announcement_card_container {
         display: grid;
@@ -1167,4 +1165,25 @@ a {
     max-height: 600px;
     width: 100%;
 }
+
+.sliding {
+    position: relative;
+    animation: slideUp 0.5s ease-out;
+    animation-delay: 0.01s;
+    transform-origin: bottom;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
 
