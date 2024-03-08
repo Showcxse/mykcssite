@@ -221,7 +221,8 @@ a {
     transition: max-height .4s ease-in;
  }
 
- .dropdown_item:hover .dropdown_arrow {
+ .dropdown_item:hover .dropdown_arrow,
+ .rotate-arrow {
     transform: rotate(180deg);
  }
  
@@ -302,10 +303,60 @@ a {
     text-decoration: underline;
 }
 
+.btn {
+    border: var(--blue-color) 3px solid;
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--white-color);
+    background-color: var(--blue-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 12rem;
+    text-align: center;
+ }
+
+.app_btn {
+    width: 450px;
+}
+
+.content_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.75rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-inline: 2rem;
+}
+
+.banner h2 {
+    color: var(--white-color);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.btn_container {
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+    margin: 2rem;
+    padding-top: 2rem;
+ }
+
 
  @media screen and (max-width: 600px) {
-    .container {
+    .container, .content_container {
         margin-inline: 1rem;
+    }
+
+    .banner h2 {
+        font-size: 2rem;
+    }
+
+    .btn_container {
+        gap: 2rem;
     }
 
     .nav_link {
@@ -336,6 +387,10 @@ a {
 
     .wide_card {
         width: 100%;
+    }
+
+    .app_btn {
+        width: 300px;
     }
 
  }
@@ -549,28 +604,6 @@ a {
     height: 90.5vh;
  }
 
- .btn_container {
-    display: flex;
-    justify-content: space-around;
-    gap: 4rem;
-    margin: 2rem;
-    padding-top: 2rem;
- }
-
-
- .btn {
-    border: var(--blue-color) 3px solid;
-    padding: 1rem;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 1.05rem;
-    color: var(--white-color);
-    background-color: var(--blue-color);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 12rem;
-    text-align: center;
- }
-
  .btn:hover {
     cursor: pointer;
     background-color: var(--light-blue-color);
@@ -754,7 +787,7 @@ a {
     cursor: pointer;
 }
 
-.announcements_banner, .banner {
+.banner {
     background: linear-gradient(var(--darker-blue-color), var(--light-blue-color));
     position: relative;
     align-self: center;
@@ -766,12 +799,6 @@ a {
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3); 
-}
-
-.announcements_banner h2, .banner h2 {
-    color: var(--white-color);
-    font-size: 3rem;
-    text-align: center;
 }
 
 .banner {
@@ -1004,10 +1031,6 @@ a {
     text-decoration: underline;
 }
 
-.app_btn {
-    width: 450px;
-}
-
 .board_btn {
     width: 100%;
 }
@@ -1043,15 +1066,6 @@ a {
 
 .wide_card img {
     max-width: 100%;
-}
-
-.content_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2.75rem;
-    padding: 3.8rem;
 }
 
 .employment_card {
@@ -1164,6 +1178,7 @@ a {
 
 .wide_athletic_card img {
     width: 100%;
+    border-radius: 12px;
 }
 
 .athletic_card:hover {
@@ -1215,6 +1230,7 @@ a {
     font-size: 0.9rem;
     width: 10rem;
 }
+
 
 
 

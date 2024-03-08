@@ -11,14 +11,23 @@ const showMenu = (toggleId, navId) => {
 
 showMenu('nav-toggler', 'nav-menu');
 
+// Stupid fucking events for stupid fucking mobile users
+const toggleDropdown = (item, dropdownClass, arrowClass) => {
+    item.classList.toggle('active');
+    const dropdownElement = item.querySelector(`.${dropdownClass}`);
+    if (dropdownElement) {
+        dropdownElement.classList.toggle('show-dropdown');
+        const arrowIcon = item.querySelector(`.${arrowClass}`);
+        if (arrowIcon) {
+            arrowIcon.classList.toggle('rotate-arrow');
+        }
+    }
+};
+
 const dropdownItems = document.querySelectorAll('.dropdown_item');
 dropdownItems.forEach(item => {
     item.addEventListener('click', () => {
-        item.classList.toggle('active');
-        const dropdownMenu = item.querySelector('.dropdown_menu');
-        if (dropdownMenu) {
-            dropdownMenu.classList.toggle('show-dropdown');
-        }
+        toggleDropdown(item, 'dropdown_menu', 'dropdown_arrow');
     });
 });
 
@@ -26,15 +35,9 @@ const dropdownSubItems = document.querySelectorAll('.dropdown_subitem');
 dropdownSubItems.forEach(item => {
     item.addEventListener('click', (event) => {
         event.stopPropagation();
-        item.classList.toggle('active');
-        const dropdownSubmenu = item.querySelector('.dropdown_submenu');
-        if (dropdownSubmenu) {
-            dropdownSubmenu.classList.toggle('show-dropdown');
-        }
+        toggleDropdown(item, 'dropdown_submenu', 'dropdown_arrow');
     });
-})
-
-
+});
 
 const cards = document.querySelectorAll('.card');
 cards.forEach(card => {
