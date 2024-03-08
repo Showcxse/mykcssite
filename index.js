@@ -4,12 +4,37 @@ const showMenu = (toggleId, navId) => {
 
     toggle.addEventListener('click', () => {
             nav.classList.toggle('show-menu');
-            nav.classList.toggle('show-icon');
+            toggle.classList.toggle('show-icon');
     
         });
     }
 
 showMenu('nav-toggler', 'nav-menu');
+
+const dropdownItems = document.querySelectorAll('.dropdown_item');
+dropdownItems.forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
+        const dropdownMenu = item.querySelector('.dropdown_menu');
+        if (dropdownMenu) {
+            dropdownMenu.classList.toggle('show-dropdown');
+        }
+    });
+});
+
+const dropdownSubItems = document.querySelectorAll('.dropdown_subitem');
+dropdownSubItems.forEach(item => {
+    item.addEventListener('click', (event) => {
+        event.stopPropagation();
+        item.classList.toggle('active');
+        const dropdownSubmenu = item.querySelector('.dropdown_submenu');
+        if (dropdownSubmenu) {
+            dropdownSubmenu.classList.toggle('show-dropdown');
+        }
+    });
+})
+
+
 
 const cards = document.querySelectorAll('.card');
 cards.forEach(card => {

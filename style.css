@@ -168,6 +168,16 @@ a {
     pointer-events: initial;
  }
 
+ .show-icon .nav_burger {
+    opacity: 0;
+    transform: rotate(90deg);
+ }
+
+ .show-icon .nav_close {
+    opacity: 1;
+    transform: rotate(90deg);
+ }
+
  .dropdown_item {
     cursor: pointer;
  }
@@ -189,7 +199,8 @@ a {
     transition: background-color .3s;
  }
 
- .dropdown_sublink i {
+ .dropdown_sublink i,
+ .dropdown_link i {
     font-size: 1.25rem;
     font-weight: 600;
  }
@@ -204,7 +215,8 @@ a {
     transition: max-height .4s ease-out;
  }
 
- .dropdown_item:hover .dropdown_menu, .dropdown_subitem:hover > .dropdown_submenu {
+ .dropdown_item:hover .dropdown_menu, .dropdown_subitem:hover > .dropdown_submenu,
+ .show-dropdown {
     max-height: 1000px;
     transition: max-height .4s ease-in;
  }
