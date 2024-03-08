@@ -1199,6 +1199,10 @@ a {
     transform: translateY(0);
 }
 
+#landing-btn {
+    font-size: 0.9rem;
+    width: 10rem;
+}
 
 
 
