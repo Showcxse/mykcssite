@@ -1166,11 +1166,12 @@ a {
     width: 100%;
 }
 
-.sliding {
+/*.sliding {
     position: relative;
     animation: slideUp 0.5s ease-out;
-    animation-delay: 0.01s;
+    animation-delay: 0.1s;
     transform-origin: bottom;
+    opacity: 0;
 }
 
 @keyframes slideUp {
@@ -1184,6 +1185,21 @@ a {
         opacity: 1;
     }
 }
+
+*/
+
+.slideUp {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 
 

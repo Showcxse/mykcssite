@@ -17,3 +17,19 @@ cards.forEach(card => {
     })
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((elements, observer) => {
+        elements.forEach((element) => {
+            if (element.isIntersecting) {
+                console.log("its working");
+                element.target.classList.add('visible');
+                observer.unobserve(element.target);
+            }
+        });
+    }, {threshold: 0.4});
+
+    const elementsToAnimate = document.querySelectorAll('[animated="true"]');
+    elementsToAnimate.forEach((element) => {
+        observer.observe(element);
+    });
+});
