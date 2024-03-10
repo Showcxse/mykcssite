@@ -345,6 +345,66 @@ a {
     padding-top: 2rem;
  }
 
+ .calendar_container {
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding-bottom: 56.25%;
+ }
+
+ .calendar_container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ }
+
+ .club_card_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    justify-content: center;
+ }
+
+ .club_card {
+    background-color: var(--white-color);
+    margin-inline: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1.4rem;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    color:#000;
+    max-width: 420px;
+    word-wrap: break-word;
+    margin-bottom: 40px;
+ }
+
+ .club_card:hover {
+    border-color: var(--blue-color);
+    transition: 0.2s ease-out;
+ }
+
+ .club_card h4 {
+    font-size: 1.1rem;
+ }
+
+ .club_card h4, .club_card p {
+    text-align: center;
+ }
+
+ .club_card img {
+    width: 100%;
+    border-radius: 8px;
+ }
+
+ .resource_wrapper {
+    padding: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
 
  @media screen and (max-width: 600px) {
     .container, .content_container {
@@ -376,10 +436,7 @@ a {
         margin-left: 20px;
         margin-bottom: 20px;
     }
-    .resource_wrapper {
-        flex-direction: column;
-        gap: 2rem;
-    }
+
 
     .board_minute_archive_container {
         flex-direction: column;
@@ -393,9 +450,18 @@ a {
         width: 300px;
     }
 
+    .club_card_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
  }
 
  @media screen and (max-width: 768px) {
+    .resource_wrapper {
+        flex-direction: column;
+        padding: 1.2rem;
+    }
+
     .footer_container {
         flex-direction: column;
         padding: 20px 30px;
@@ -549,6 +615,10 @@ a {
 
     .announcement_card {
         max-width: none;
+    }
+
+    .club_card_container {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -835,15 +905,43 @@ a {
     border-bottom: 1px solid var(--blue-color);
 }
 
-
 .resources_container {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+}
+
+
+.contact_container {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact_container p {
+    font-size: 1rem;
+}
+
+.contact_container a {
+    color: var(--blue-color);
+}
+
+.contact_container a:hover {
+    text-decoration: underline;
+}
+
+.resources_container h4 {
+    font-size: 1.5rem;
+    color: var(--darker-blue-color);
 }
 
 .resources_container p {
     font-size: 0.938rem;
     opacity: 0.6;
 }
+
 
 .archived_announcement_container {
     text-align: center;
@@ -888,12 +986,6 @@ a {
 
 .small_announcement_card {
     height: 240px;
-}
-
-.resource_wrapper {
-    padding: 2.4rem;
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .staff_card_container, .card_container {
@@ -1057,6 +1149,7 @@ a {
     margin-bottom: 40px;
     gap: 1.25rem;
     border: 2px solid transparent;
+    width: 100%;
 }
 
 .wide_card:hover {
@@ -1125,9 +1218,10 @@ a {
 
 .section_header {
     margin-inline: 4rem;
-    padding-top: 3.5rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
     font-size: 2.5rem;
+    color: var(--blue-color);
 }
 
 .athletic_card_container {
