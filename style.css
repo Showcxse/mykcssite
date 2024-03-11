@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Saira+Condensed:wght@300;400;500&family=Ubuntu&display=swap');
+/*Universal Styles Reused Throughout the Site */
 :root {
 
     --blue-color: #2479d4;
@@ -337,14 +338,6 @@ a {
     text-align: center;
 }
 
-.btn_container {
-    display: flex;
-    justify-content: space-around;
-    gap: 4rem;
-    margin: 2rem;
-    padding-top: 2rem;
- }
-
  .calendar_container {
     position: relative;
     height: 0;
@@ -405,6 +398,104 @@ a {
     gap: 3rem;
 }
 
+.wide_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white-color);
+    margin-inline: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1.4rem;
+    border-radius: 36px;
+    color:#000;
+    max-width: 1200px;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap: 1.25rem;
+    border: 2px solid transparent;
+    width: 100%;
+}
+
+.card_header {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.wide_card:hover {
+    border-color: var(--blue-color);
+    transition: 0.2s ease-out;
+}
+
+.athletic_card_container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    flex-wrap: wrap;
+
+}
+
+.wide_athletic_card {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white-color);
+    margin-inline: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1.4rem;
+    border-radius: 36px;
+    color:#000;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap: 1.25rem;
+    border: 2px solid transparent;
+    grid-column: span 2;
+}
+
+.athletic_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white-color);
+    margin-inline: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1.4rem;
+    border-radius: 36px;
+    color:#000;
+    max-width: 500px;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap: 1.25rem;
+    border: 2px solid transparent;
+}
+
+.wide_athletic_card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.athletic_card:hover {
+    border-color: var(--blue-color);
+    transform: scale(1.05);
+    transition: 0.2s ease-out;
+}
+
+.athletic_card img {
+    border-radius: 12px;
+    width: 100%;
+}
+
+.btn_container {
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+    margin: 2rem;
+    padding-top: 2rem;
+ }
+
 
  @media screen and (max-width: 600px) {
     .container, .content_container {
@@ -417,6 +508,11 @@ a {
 
     .btn_container {
         gap: 2rem;
+    }
+
+    #landing-btn {
+        font-size: 0.9rem;
+        width: 10rem;
     }
 
     .nav_link {
@@ -454,9 +550,16 @@ a {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    #about-btn-container {
+        flex-direction: column;
+    }
+
  }
 
  @media screen and (max-width: 768px) {
+    .contact_container {
+        flex-direction: column;
+    }
     .resource_wrapper {
         flex-direction: column;
         padding: 1.2rem;
@@ -500,6 +603,10 @@ a {
         width: 50%;
         padding-left: 0.3rem;
         text-align: left;
+    }
+
+    .athletic_card_container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 
@@ -604,8 +711,6 @@ a {
         grid-column: unset;
     }
 
-
-
     .announcement_card_container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -618,6 +723,10 @@ a {
     }
 
     .club_card_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .athletic_card_container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -1133,30 +1242,6 @@ a {
     font-weight: 700;
 }
 
-.wide_card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--white-color);
-    margin-inline: auto;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 1.4rem;
-    border-radius: 36px;
-    color:#000;
-    max-width: 1200px;
-    word-wrap: break-word;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-    gap: 1.25rem;
-    border: 2px solid transparent;
-    width: 100%;
-}
-
-.wide_card:hover {
-    border-color: var(--blue-color);
-    transition: 0.2s ease-out;
-}
-
 .wide_card img {
     max-width: 100%;
 }
@@ -1224,69 +1309,6 @@ a {
     color: var(--blue-color);
 }
 
-.athletic_card_container {
-    display: flex;
-    justify-content: space-around;
-    gap: 2rem;
-    flex-wrap: wrap;
-
-}
-
-.wide_athletic_card {
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--white-color);
-    margin-inline: auto;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 1.4rem;
-    border-radius: 36px;
-    color:#000;
-    word-wrap: break-word;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-    gap: 1.25rem;
-    border: 2px solid transparent;
-}
-
-.athletic_card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--white-color);
-    margin-inline: auto;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 1.4rem;
-    border-radius: 36px;
-    color:#000;
-    max-width: 800px;
-    word-wrap: break-word;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-    gap: 1.25rem;
-    border: 2px solid transparent;
-}
-
-
-
-.wide_athletic_card img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-.athletic_card:hover {
-    border-color: var(--blue-color);
-    transform: scale(1.05);
-    transition: 0.2s ease-out;
-}
-
-.athletic_card img {
-    border-radius: 12px;
-    max-height: 600px;
-    width: 100%;
-}
-
 /*.sliding {
     position: relative;
     animation: slideUp 0.5s ease-out;
@@ -1318,11 +1340,6 @@ a {
 .visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-#landing-btn {
-    font-size: 0.9rem;
-    width: 10rem;
 }
 
 

@@ -1,3 +1,4 @@
+//Event to toggle nav bar states
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId);
@@ -38,14 +39,14 @@ dropdownSubItems.forEach(item => {
         toggleDropdown(item, 'dropdown_submenu', 'dropdown_arrow');
     });
 });
-
+//Event to flip .card elements
 const cards = document.querySelectorAll('.card');
 cards.forEach(card => {
     card.addEventListener('click', () => {
         card.classList.toggle('flip_card')
     });
 })
-
+//Functions to animated elements and to make sure they only fire when they are on screen
 document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((elements, observer) => {
         elements.forEach((element) => {
