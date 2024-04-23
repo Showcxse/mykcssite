@@ -402,7 +402,7 @@ a {
  .resource_wrapper {
     padding: 2.4rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 3rem;
 }
 
@@ -435,6 +435,8 @@ a {
     border-color: var(--blue-color);
     transition: 0.2s ease-out;
 }
+
+/*Styles used for the cards on the athletics page */
 
 .athletic_card_container {
     display: grid;
@@ -505,10 +507,14 @@ a {
     padding-top: 2rem;
  }
 
-
+ /*Media queries to handle responsiveness for mobile users */
  @media screen and (max-width: 600px) {
     .container, .content_container {
         margin-inline: 1rem;
+    }
+
+    .hero_section h1 {
+        font-size: 3rem;
     }
 
     .banner h2 {
@@ -564,7 +570,7 @@ a {
     }
 
  }
-
+/*Media queries for better responsiveness on smaller screens and mobile users */
  @media screen and (max-width: 768px) {
     .contact_container {
         flex-direction: column;
@@ -584,7 +590,7 @@ a {
         margin-bottom: 20px;
     }
 
-
+    /*Adjusted styles for school board table to look clean on smaller screens */
     .board_table thead {
         display: none;
     }
@@ -620,7 +626,7 @@ a {
 
 
  }
-
+    /*Home page card responsiveness for medium sized screens */
  @media screen and (min-width: 768px) {
     .about_card_container {
         grid-template-columns: 1fr 1fr;
@@ -632,12 +638,12 @@ a {
 
 }
 
-
+ /*Sitewide styles for better responsiveness on larger screens */
  @media screen and (min-width: 1118px) {
     .container {
         margin-inline: auto;
     }
-
+    /*These nav styles are very important for its responsiveness and functionality on all screens */
     .nav {
         height: calc(var(--header-height) + 2rem);
         display: flex;
@@ -708,6 +714,8 @@ a {
         transition: top 0.3s;
     }
 
+    /*Minor layout adjustments and grid alterations for increased responsiveness */
+
     .hero_section {
         padding-top: calc(var(--header-height) + 2rem) !important;
     }
@@ -740,6 +748,7 @@ a {
     }
 }
 
+/*Styles for the majority of the landing page */
 
  .hero_section {
     display: flex;
@@ -997,6 +1006,7 @@ a {
     max-width: 380px;
     max-height: 380px;
     border-radius: 8px;
+
 }
 
 .announcement_col {
@@ -1084,6 +1094,8 @@ a {
     max-width: 420px;
     word-wrap: break-word;
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 .announcement_card:hover {
