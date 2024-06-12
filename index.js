@@ -1,3 +1,4 @@
+
 //Event to toggle nav bar states
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
