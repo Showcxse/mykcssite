@@ -139,7 +139,7 @@ a {
         max-width: 200px;
     }
 
-     .banner {
+    .banner {
         padding-top: var(--header-height);
     }
 
@@ -147,11 +147,11 @@ a {
         flex-direction: column;
     }
     
- }
+}
 
 
 
- .nav_link {
+.nav_link {
     color: var(--white-color);
     font-weight: 600;
     padding: 1.25rem 1.5rem;
@@ -159,41 +159,41 @@ a {
     justify-content: space-between;
     align-items: center;
     transition: background-color .3s;
- }
+}
 
- .nav_link:hover {
+.nav_link:hover {
     background-color: var(--light-blue-color);
- }
+}
 
  /* Classes that make the navbar function. THESE ARE IMPORTANT */
 
- .show-menu {
+.show-menu {
     opacity: 1;
     top: 3.5rem;
     pointer-events: initial;
- }
+}
 
- .show-icon .nav_burger {
+.show-icon .nav_burger {
     opacity: 0;
     transform: rotate(90deg);
- }
+}
 
- .show-icon .nav_close {
+.show-icon .nav_close {
     opacity: 1;
     transform: rotate(90deg);
- }
+}
 
- .dropdown_item {
+.dropdown_item {
     cursor: pointer;
- }
+}
 
- .dropdown_arrow {
+.dropdown_arrow {
     font-size: 1.25rem;
     font-weight: 600;
     transition: transform .4s;
- }
+}
 
- .dropdown_link, .dropdown_sublink {
+.dropdown_link, .dropdown_sublink {
     padding: 1.25rem 1.25rem 1.25rem 2.5rem;
     color: var(--white-color);
     background-color: var(--darker-blue-color);
@@ -202,46 +202,46 @@ a {
     column-gap: 0.5rem;
     font-weight: 600;
     transition: background-color .3s;
- }
+}
 
- .dropdown_sublink i,
- .dropdown_link i {
+.dropdown_sublink i,
+.dropdown_link i {
     font-size: 1.25rem;
     font-weight: 600;
- }
+}
 
- .dropdown_link:hover, .dropdown_sublink:hover {
+.dropdown_link:hover, .dropdown_sublink:hover {
     background-color: var(--blue-color);
- }
+}
 
- .dropdown_menu, .dropdown_submenu {
+.dropdown_menu, .dropdown_submenu {
     max-height: 0;
     overflow: hidden;
     transition: max-height .4s ease-out;
- }
+}
 
- .dropdown_item:hover .dropdown_menu, .dropdown_subitem:hover > .dropdown_submenu,
- .show-dropdown {
+.dropdown_item:hover .dropdown_menu, .dropdown_subitem:hover > .dropdown_submenu,
+.show-dropdown {
     max-height: 1000px;
     transition: max-height .4s ease-in;
- }
+}
 
- .dropdown_item:hover .dropdown_arrow,
- .rotate-arrow {
+.dropdown_item:hover .dropdown_arrow,
+.rotate-arrow {
     transform: rotate(180deg);
- }
- 
- .dropdown_add {
-    margin-left: auto;
- }
+}
 
- .dropdown_sublink {
+.dropdown_add {
+    margin-left: auto;
+}
+
+.dropdown_sublink {
     background-color: var(--darker-blue-color);
- }
+}
 
  /*Styles for the table on the school board page */
 
- .table_container {
+.table_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -321,7 +321,7 @@ a {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 12rem;
     text-align: center;
- }
+}
 
 .app_btn {
     width: 450px;
@@ -343,32 +343,32 @@ a {
     font-size: 3rem;
     text-align: center;
 }
- /*Styles that make google calendars mesh the best they can (which is still bad)*/
- .calendar_container {
+/*Styles that make google calendars mesh the best they can (which is still bad)*/
+.calendar_container {
     position: relative;
     height: 0;
     width: 100%;
     padding-bottom: 56.25%;
- }
+}
 
- .calendar_container iframe {
+.calendar_container iframe {
     position: absolute;
     top:0;
     left: 0;
     width: 100%;
     height: 100%;
- }
+}
 
  /* Styles for the club section of the high school page */
 
- .club_card_container {
+.club_card_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     justify-content: center;
- }
+}
 
- .club_card {
+.club_card {
     background-color: var(--white-color);
     margin-inline: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -379,27 +379,27 @@ a {
     max-width: 420px;
     word-wrap: break-word;
     margin-bottom: 40px;
- }
+}
 
- .club_card:hover {
+.club_card:hover {
     border-color: var(--blue-color);
     transition: 0.2s ease-out;
- }
+}
 
- .club_card h4 {
+.club_card h4 {
     font-size: 1.1rem;
- }
+}
 
- .club_card h4, .club_card p {
+.club_card h4, .club_card p {
     text-align: center;
- }
+}
 
- .club_card img {
+.club_card img {
     width: 100%;
     border-radius: 8px;
- }
+}
 
- .resource_wrapper {
+.resource_wrapper {
     padding: 2.4rem;
     display: flex;
     justify-content: space-around;
@@ -505,10 +505,10 @@ a {
     gap: 4rem;
     margin: 2rem;
     padding-top: 2rem;
- }
+}
 
  /*Media queries to handle responsiveness for mobile users */
- @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .container, .content_container {
         margin-inline: 1rem;
     }
@@ -624,10 +624,19 @@ a {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .login_container {
+        padding: 1.5rem;
+        width: 80%;
+    }
 
- }
+    .sign_in {
+        flex-direction: column;
+    }
+
+
+}
     /*Home page card responsiveness for medium sized screens */
- @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .about_card_container {
         grid-template-columns: 1fr 1fr;
     }
@@ -636,10 +645,14 @@ a {
         grid-column: span 2;
     }
 
+    .login_container {
+        padding: 3.8rem
+    }
+
 }
 
  /*Sitewide styles for better responsiveness on larger screens */
- @media screen and (min-width: 1118px) {
+@media screen and (min-width: 1118px) {
     .container {
         margin-inline: auto;
     }
@@ -750,7 +763,7 @@ a {
 
 /*Styles for the majority of the landing page */
 
- .hero_section {
+.hero_section, .login_wrapper {
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./assets/resizedbp.png);
@@ -764,9 +777,9 @@ a {
     align-items: center;
     justify-content: center;
     padding-top: var(--header-height);
- }
+}
 
- .title_wrapper {
+.title_wrapper {
     position: absolute;
     top: 0;
     left: 0;
@@ -776,40 +789,39 @@ a {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
 
- }
-
- .hero_section h1 {
+.hero_section h1 {
     margin: 0 auto;
     text-align: center;
     color: var(--white-color);
     font-weight: 600;
     font-size: 6rem;
     /*font-family: "Saira Semi Condensed", sans-serif; */
- }
+}
 
- .hero_section h2 {
+.hero_section h2 {
     padding-top: 2rem;
     text-align: center;
     color: var(--white-color);
     font-weight: 300;
     font-size: 2.1rem;
- }
+}
 
- .hero_image {
+.hero_image {
     position: relative;
     height: 90.5vh;
- }
+}
 
- .btn:hover {
+.btn:hover {
     cursor: pointer;
     background-color: var(--light-blue-color);
     border-color: var(--light-blue-color);
     transition: 0.2s ease-out;
     transform: scale(1.05);
- }
+}
 
- .about_section {
+.about_section {
     background-color: rgb(240, 240, 240);
     box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3); 
     color: #2196f3;
@@ -818,29 +830,29 @@ a {
     text-align: center;
     justify-content: center;
     align-items: center;
- }
+}
 
- .about_header {
+.about_header {
     font-size: 3rem;
     margin-top: 3.2rem;
     position: relative;
     color: #2196f3
- }
+}
 
- .about_card h2 {
+.about_card h2 {
     font-size: 1.8rem;
     color: #2196f3;
     margin-top: 16px;
     margin-bottom: 12px;
- }
+}
 
- .about_card_container {
+.about_card_container {
     padding-top: 60px;
     display: grid;
     gap: 40px;
- }
+}
 
- .about_card {
+.about_card {
     background-color: var(--white-color);
     margin-inline: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -1033,6 +1045,47 @@ a {
     border-bottom: 1px solid var(--blue-color);
 }
 
+.login_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--white-color);
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 2px solid var(--blue-color);
+}
+
+.login_title {
+    position: relative;
+}
+
+.login_title::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--blue-color);
+}
+
+#sign-in-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.sign_in {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.sign_in img {
+    width: 180px;
+}
+
 .resources_container {
     display: flex;
     flex-direction: column;
@@ -1134,7 +1187,7 @@ a {
     width: 350px;
 }
 
- .card {
+.card {
     background-color: var(--white-color);
     margin-inline: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

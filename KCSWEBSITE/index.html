@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kihei Charter School</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+    <!--NAVBAR-->
+
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav_data">
+                <a href="#" class="nav_logo">
+                    <img src="./assets/smalltranspartentlogo.png" alt="logo">Kihei Charter School
+                </a>
+
+                <!--BURGER MENU-->
+
+                <div class="nav_toggler" id="nav-toggler">
+                    <i class="ri-menu-line nav_burger"></i>
+                    <i class="ri-close-line nav_close"></i>
+                </div>
+            </div>
+
+            <!--NAV ITEMS/SUBMENUS-->
+
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li>
+                        <a href="./pages/announcements.html" class="nav_link">Announcements</a>
+                    </li>
+                    <li class="dropdown_item">
+                        <div class="nav_link">About
+                            <i class="ri-arrow-down-s-line dropdown_arrow"></i>
+                        </div>
+                            <ul class="dropdown_menu">
+                                <li>
+                                    <a href="#about-section" class="dropdown_link">About KCS</a>
+                                </li>
+                                <li>
+                                    <a href="https://kiheicharter.org/sites/default/files/2023-12/23-%2724%20Student%20Handbook_0.pdf" target="_blank" class="dropdown_link">Student Handbook</a>
+                                </li>
+                                <li>
+                                    <a href="#academic-section" class="dropdown_link">Academics</a>
+                                </li>
+                                <li>
+                                    <a href="./pages/adminsupportstaff.html" class="dropdown_link">Administration/Support Staff</a>
+                                </li>
+                                <li>
+                                    <a href="https://kiheicharter.org/sites/default/files/2018-03/Hawaii%20DOE%20_%20Student%20Privacy.pdf" target="_blank" class="dropdown_link">FERPA</a>
+                                </li>
+                                <li>
+                                    <a href="https://kiheicharter.org/sites/default/files/2022-02/Wellness%20Policy%20for%20Kihei%20Charter%20School%2040918.pdf" target="_blank" class="dropdown_link">Wellness Policy</a>
+                                </li>
+                            </ul>
+                    </li>
+                    <li class="dropdown_item">
+                        <div class="nav_link">School
+                            <i class="ri-arrow-down-s-line dropdown_arrow"></i>
+                        </div>
+                        <ul class="dropdown_menu">
+                            <li class="dropdown_subitem">
+                                <div class="dropdown_link">
+                                    Elementary School <i class="ri-add-line dropdown_add"></i>
+                                </div>
+                                <ul class="dropdown_submenu">
+                                    <li>
+                                        <a href="./pages/elementarystaff.html" class="dropdown_sublink">
+                                        Elementary School Staff
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./pages/elementary.html" class="dropdown_sublink">
+                                            Calendar/Contacts
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://kiheicharter.org/sites/default/files/2023-06/K-5%20Supply%20Lists%202023-2024.pdf" target="_blank" class="dropdown_sublink">
+                                            K-5 Supply Lists
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown_subitem">
+                                <div class="dropdown_link">
+                                    Middle School <i class="ri-add-line dropdown_add"></i>
+                                </div>
+                                <ul class="dropdown_submenu">
+                                    <li>
+                                        <a href="./pages/middlestaff.html" class="dropdown_sublink">
+                                        Middle School Staff
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./pages/middle.html" class="dropdown_sublink">
+                                            Calendar/Contacts
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://kiheicharter.org/sites/default/files/2023-06/6-8%2023-24%20School%20Supply%20List.pdf" target="_blank" class="dropdown_sublink">
+                                            6th-8th Supply Lists
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown_subitem">
+                                <div class="dropdown_link">
+                                    High School <i class="ri-add-line dropdown_add"></i>
+                                </div>
+                                <ul class="dropdown_submenu">
+                                    const dropdownSubItems = document.querySelectorAll('.dropdown_subitem'); dropdownSubItems.forEach(item => { item.addEventListener('click', (event) => { event.stopPropagation(); toggleDropdown(item, 'dropdown_submenu', 'dropdown_arrow'); }); }); //Event to flip .card elements const cards = document.querySelectorAll('.card'); cards.forEach(card => { card.addEventListener('click', () => { card.classList.toggle('flip_card') }); }) //Functions to animated elements and to make sure they only fire when they are on screen document.addEventListener('DOMContentLoaded', () => { const observer = new IntersectionObserver((elements, observer) => { elements.forEach((element) => { if (element.isIntersecting) { console.log("it's working delete me if you see this"); element.target.classList.add('visible'); observer.unobserve(element.target); } }); }, {threshold: 0.35});
+
+                                    <li>
+                                        <a href="./pages/highstaff.html" class="dropdown_sublink">
+                                        High School Staff
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./pages/highclubs.html" class="dropdown_sublink">
+                                        High School Calendar & Clubs
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://id.naviance.com/samlsso?institutionId=7803952DUS&userType=student" target="_blank" class="dropdown_sublink">
+                                        Naviance
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown_subitem">
+                                <div class="dropdown_link">
+                                    Calendars <i class="ri-add-line dropdown_add"></i>
+                                </div>
+                                <ul class="dropdown_submenu">
+                                    <li>
+                                        <a href="https://kiheicharter.org/sites/default/files/2023-09/SY%202023-2024%20UPDATED%20KCS%20Calendar.pdf" target="_blank" class="dropdown_link">Schoolwide Calendar</a>    
+                                    </li>
+                                    <li>
+                                        <a href="./pages/elemcalendar.html" class="dropdown_link">Elementary Calendar</a>
+                                    </li>
+                                    <li>
+                                        <a href="./pages/middlecalendar.html" class="dropdown_link">Middle School Calendar</a>
+                                    </li>
+                                    <li>
+                                        <a href="./pages/highcalendar.html" class="dropdown_link">High School Calendar</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./pages/schoolenrollment.html" class="dropdown_link">Enrollment</a>
+                            </li>
+                            <li>
+                                <a href="https://kiheicharter.org/sites/default/files/2024-01/KCS%20Lunch%20Menu%202024%20FEB.pdf" target="_blank" class="dropdown_link">School Meals</a>
+                            </li>
+
+                        </ul></li> 
+                    <li class="dropdown_item">
+                        <div class="nav_link">Join Our Team
+                            <i class="ri-arrow-down-s-line dropdown_arrow"></i>
+                        </div>
+                        <ul class="dropdown_menu">
+                            <li>
+                                <a href="./pages/employment.html" class="dropdown_link">Employment</a>
+                            </li>
+                            <li>
+                                <a href="./pages/escript.html" class="dropdown_link">E-Script</a>
+                            </li>
+                        </ul></li>
+                        <li class="dropdown_item">
+                            <div class="nav_link">Sports
+                                <i class="ri-arrow-down-s-line dropdown_arrow"></i>
+                            </div>
+                            <ul class="dropdown_menu">
+                                <li>
+                                    <a href="./pages/athletics.html" class="dropdown_link">Athletics</a>
+                                </li>
+                                <li>
+                                    <a href="https://milsports.org/schedules" target="_blank" class="dropdown_link">Schedules & Results</a>
+                                </li>
+                                <li>
+                                    <a href="./pages/coaches.html" class="dropdown_link">Coaches</a>
+                                </li>
+                                <li class="dropdown_subitem">
+                                    <div class="dropdown_link">
+                                        Athelete Handbook/Forms
+                                        <i class="ri-add-line dropdown_add"></i>
+                                    </div>
+                                    <ul class="dropdown_submenu">
+                                        <li>
+                                            <a href="https://kiheicharter.org/sites/default/files/2022-01/2021-22-Parent-Athlete-Resource-Guide-%2810-5-21%29.pdf" target="_blank" class="dropdown_link">
+                                                Parent-Athlete-Resource-Guide
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://kiheicharter.org/sites/default/files/2022-01/Club%20Sports%20Waiver%20and%20Physical%20Forms.pdf" target="_blank" class="dropdown_link">
+                                            Club Sports Waiver and Physical Forms
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://kiheicharter.org/sites/default/files/2022-01/Student%20Participation%20and%20Parent%20Consent%20Form.pdf" class="dropdown_link" target="_blank">
+                                                Student Participation and Parent Consent Form
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://kiheicharter.org/sites/default/files/2022-01/Physical%20Exam%26%20Concussion%20Mgmt%20Form.pdf" class="dropdown_link" target="_blank">
+                                                Physical Exam & Concussion Management Form
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="./pages/sharkcage.html" class="dropdown_link">Shark Cage</a>
+                                </li>
+                                <li>
+                                    <a href="https://sideline.bsnsports.com/schools/hawaii/kihei/kihei-charter-high-school" target="_blank" class="dropdown_link">Sideline Store</a>
+                                </li>
+                            </ul></li>         
+                        <li>
+                            <a href="./pages/schoolboard.html" class="nav_link">School Board</a>
+                        </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<!--Main landing section-->
+    <section class="hero_section" id="hero-section">
+            <div class="title_wrapper slideUp" animated="true">
+                <h1>Kihei Charter School</h1>
+                <h2>Innovative 21st Century Public Education</h2>
+                <div class="btn_container" id="landing-btn-container">
+                    <a href="./pages/announcements.html">
+                        <div class="btn" id="landing-btn">
+                        Announcements
+                        </div>
+                    </a>
+                    <a href="#about-section">
+                        <div class="btn" id="landing-btn">
+                        About KCS
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!--About KCS Section-->
+    <section class="about_section" id="about-section">
+        <h2 class="about_header slideUp" animated="true">About Kihei Charter School</h2>
+        <div class="about_card_container">
+            <div class="about_card slideUp" animated="true">
+                <h2>About Us</h2>
+                <i class="ri-school-fill about_symbol"></i>
+                <p>Everyday, Kihei Charter School is building a stronger, more diverse workforce for tomorrow. Our innovative approach to learning is challenging outdated methods of educating our keiki (children). Through cutting-edge curriculum and game-changing technology, KCS is able to nurture a new generation of engaged learners and chart new horizons in education.</p>
+            </div>
+            <div class="about_card slideUp" animated="true">
+                <h2>Our Mission</h2>
+                <i class="ri-road-map-fill about_symbol"></i>
+                <p>To conceptualize, organize, and build innovative learning environments with custom designed educational programs that will prepare students for a satisfying and productive life in the 21st Century.</p>
+            </div>
+            <div class="about_card slideUp" animated="true">
+                <h2>Our Vision</h2>
+                <i class="ri-pencil-fill about_symbol"></i>
+                <p>To inspire, create and support innovative, cooperative and productive learning environments.</p>
+            </div> 
+        </div>
+        <!--Section for school's academic information-->
+        <div class="academic_container" id="academic-section">
+            <h2 class="about_header slideUp" animated="true">Academics</h2>
+            <p class="quote slideUp" animated="true">“We have an innovation addiction… we can’t catch it, but we must continue to chase it.”<br> - KCS Leadership Team</p>
+            <i class="ri-book-open-fill about_symbol slideUp" animated="true"></i>
+            <p class="academic_text slideUp" animated="true">Kihei Charter School has developed innovative academic programs that are centered around choice: individualized learning that is personalized and student-centered. Through cutting-edge curriculum and implementing game-changing technology, KCS is able to nurture a new generation of engaged learners.</p>
+            <!--Access for Course Descriptions and Student Handbook-->
+            <div class="btn_container" id="about-btn-container">
+                <a href="https://kiheicharter.org/sites/default/files/2023-12/Kihei%20Charter%20High%20School%20Course%20Descriptions%2023_24.pdf" target="_blank">
+                    <div class="btn academic_btn slideUp" animated="true">Course Descriptions</div>
+                </a>
+                <a href="https://kiheicharter.org/sites/default/files/2023-12/23-%2724%20Student%20Handbook_0.pdf" target="_blank">
+                    <div class="btn academic_btn slideUp" animated="true">Student Handbook</div>
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+    <!--Footer for every page-->
+    <section class="footer_section" id="footer-section">
+        <div class="footer_container">
+            <div class="footer_col footer_logo_col">
+                <img class="footer_logo" src="./assets/smalltranspartentlogo.png" alt="logoimage">
+                <!-- <p class="slogan">Innovative 21st Century Public Education</p> -->
+            </div>
+            <!--Any footer navigation changes can be made here-->
+            <div class="footer_col">
+                <ul>
+                    <li><a href="./pages/announcements.html">Announcements</a></li>
+                    <li><a href="#academic-section">Academics</a></li>
+                    <li><a href="./pages/adminsupportstaff.html">Administration</a></li>
+                    <li><a href="https://kiheicharter.org/sites/default/files/2023-09/SY%202023-2024%20UPDATED%20KCS%20Calendar.pdf" target="_blank">Calendar</a></li>
+                </ul> 
+            </div>
+            <div class="footer_col">
+                <ul>
+                    <li><a href="./pages/elementary.html">Elementary</a></li>
+                    <li><a href="./pages/middle.html">Middle School</a></li>
+                    <li><a href="./pages/highclubs.html">High School</a></li>
+                    <li><a href="https://kiheicharter.org/sites/default/files/2024-01/KCS%20Lunch%20Menu%202024%20FEB.pdf" target="_blank">School Meals</a></li>
+                </ul> 
+            </div>
+            <div class="footer_col">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="./pages/employment.html">Employment</a></li>
+                    <li><a href="./pages/schoolboard.html">School Board</a></li>
+                </ul> 
+            </div>
+        </div>
+    <hr class="footer_break">
+    <div class="footer_container footer_bottom">
+        <div class="media_icons">
+            <a href="https://www.facebook.com/p/Kihei-Charter-School-K-12-100063998353956/" target="_blank"><i class="ri-facebook-circle-fill"></i></a>
+            <a href="https://www.instagram.com/kchstigersharks/" target="_blank"><i class="ri-instagram-fill"></i></a>
+        </div>
+            <p class="footer_legal">&#169; 2024 Kihei Charter School. All Rights Reserved - P: 808-875-0700 - F: 808-874-6745 - Kihei Charter School is a Public School, Grades K-12, Serving all of Maui<br>
+                (Mailing Address) PO BOX 1098 Kihei Hi. 96753 (Physical Address) 650 Lipoa Parkway Kihei Hawaii 96753</p>
+    </div>   
+    </section>
+    <script src="./index.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAGzcLtpACZdiNnFnQq83iiu1DTTtUOOZc",
+            authDomain: "kcs-website-e2909.firebaseapp.com",
+            databaseURL: "https://kcs-website-e2909-default-rtdb.firebaseio.com",
+            projectId: "kcs-website-e2909",
+            storageBucket: "kcs-website-e2909.appspot.com",
+            messagingSenderId: "44532491992",
+            appId: "1:44532491992:web:986fc4403b472eeb1f99ad",
+            measurementId: "G-HDNR4CQYD4"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+</body>
+</html>

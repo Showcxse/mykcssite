@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kihei Charter School</title>
+    <title>Login | Kihei Charter School</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-
     <!--NAVBAR-->
 
     <header class="header">
         <nav class="nav container">
             <div class="nav_data">
-                <a href="#" class="nav_logo">
+                <a href="./index.html" class="nav_logo">
                     <img src="./assets/smalltranspartentlogo.png" alt="logo">Kihei Charter School
                 </a>
 
@@ -119,12 +118,12 @@
                                     </li>
                                     <li>
                                         <a href="./pages/highclubs.html" class="dropdown_sublink">
-                                            High School Calendar & Clubs
+                                        High School Calendar & Clubs
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://id.naviance.com/samlsso?institutionId=7803952DUS&userType=student" target="_blank" class="dropdown_sublink">
-                                           Naviance
+                                        Naviance
                                         </a>
                                     </li>
                                 </ul>
@@ -228,70 +227,36 @@
         </nav>
     </header>
 
-<!--Main landing section-->
-    <section class="hero_section" id="hero-section">
-            <div class="title_wrapper slideUp" animated="true">
-                <h1>Kihei Charter School</h1>
-                <h2>Innovative 21st Century Public Education</h2>
-                <div class="btn_container" id="landing-btn-container">
-                    <a href="./pages/announcements.html">
-                        <div class="btn" id="landing-btn">
-                        Announcements
-                        </div>
-                    </a>
-                    <a href="#about-section">
-                        <div class="btn" id="landing-btn">
-                        About KCS
-                        </div>
-                    </a>
-                </div>
+    <div class="login_wrapper">
+        <div class="login_container">
+            <div class="sign_in">
+                <form action="" id="sign-in-form">
+                    <h2 class="login_title">
+                        Sign In
+                    </h2>
+                    <div class="input_field">
+                        <i class="ri-user-fill"></i>
+                        <input type="text" placeholder="Email" id="email">
+                    </div>
+                    <div class="input_field">
+                        <i class="ri-lock-password-fill"></i>
+                        <input type="password" placeholder="Password" id="password">
+                    </div>
+                    <input type="submit" value="Login" class="btn" id="sign-in-btn">
+                </form>
+                <img src="./assets/Kihei_Charter_Logo_0.png" alt="kcs logo">
             </div>
-        </section>
-        <!--About KCS Section-->
-    <section class="about_section" id="about-section">
-        <h2 class="about_header slideUp" animated="true">About Kihei Charter School</h2>
-        <div class="about_card_container">
-            <div class="about_card slideUp" animated="true">
-                <h2>About Us</h2>
-                <i class="ri-school-fill about_symbol"></i>
-                <p>Everyday, Kihei Charter School is building a stronger, more diverse workforce for tomorrow. Our innovative approach to learning is challenging outdated methods of educating our keiki (children). Through cutting-edge curriculum and game-changing technology, KCS is able to nurture a new generation of engaged learners and chart new horizons in education.</p>
-            </div>
-            <div class="about_card slideUp" animated="true">
-                <h2>Our Mission</h2>
-                <i class="ri-road-map-fill about_symbol"></i>
-                <p>To conceptualize, organize, and build innovative learning environments with custom designed educational programs that will prepare students for a satisfying and productive life in the 21st Century.</p>
-            </div>
-            <div class="about_card slideUp" animated="true">
-                <h2>Our Vision</h2>
-                <i class="ri-pencil-fill about_symbol"></i>
-                <p>To inspire, create and support innovative, cooperative and productive learning environments.</p>
-            </div> 
-        </div>
-        <!--Section for school's academic information-->
-        <div class="academic_container" id="academic-section">
-            <h2 class="about_header slideUp" animated="true">Academics</h2>
-            <p class="quote slideUp" animated="true">“We have an innovation addiction… we can’t catch it, but we must continue to chase it.”<br> - KCS Leadership Team</p>
-            <i class="ri-book-open-fill about_symbol slideUp" animated="true"></i>
-            <p class="academic_text slideUp" animated="true">Kihei Charter School has developed innovative academic programs that are centered around choice: individualized learning that is personalized and student-centered. Through cutting-edge curriculum and implementing game-changing technology, KCS is able to nurture a new generation of engaged learners.</p>
-            <!--Access for Course Descriptions and Student Handbook-->
-            <div class="btn_container" id="about-btn-container">
-                <a href="https://kiheicharter.org/sites/default/files/2023-12/Kihei%20Charter%20High%20School%20Course%20Descriptions%2023_24.pdf" target="_blank">
-                    <div class="btn academic_btn slideUp" animated="true">Course Descriptions</div>
-                </a>
-                <a href="https://kiheicharter.org/sites/default/files/2023-12/23-%2724%20Student%20Handbook_0.pdf" target="_blank">
-                    <div class="btn academic_btn slideUp" animated="true">Student Handbook</div>
-                </a>
-            </div>
-
-
-        </div>
-    </section>
-    <!--Footer for every page-->
+            <p>
+                If you are having trouble signing in contact caseyabbott@kiheicharter.org 
+            </p>
+        </div>    
+    </div>
+    
     <section class="footer_section" id="footer-section">
         <div class="footer_container">
             <div class="footer_col footer_logo_col">
                 <img class="footer_logo" src="./assets/smalltranspartentlogo.png" alt="logoimage">
-              <!-- <p class="slogan">Innovative 21st Century Public Education</p> -->
+                <!-- <p class="slogan">Innovative 21st Century Public Education</p> -->
             </div>
             <!--Any footer navigation changes can be made here-->
             <div class="footer_col">
@@ -302,8 +267,7 @@
                     <li><a href="https://kiheicharter.org/sites/default/files/2023-09/SY%202023-2024%20UPDATED%20KCS%20Calendar.pdf" target="_blank">Calendar</a></li>
                 </ul> 
             </div>
-            <div class="footer_col">
-              
+            <div class="footer_col">              
                 <ul>
                     <li><a href="./pages/elementary.html">Elementary</a></li>
                     <li><a href="./pages/middle.html">Middle School</a></li>
@@ -330,6 +294,51 @@
                 (Mailing Address) PO BOX 1098 Kihei Hi. 96753 (Physical Address) 650 Lipoa Parkway Kihei Hawaii 96753</p>
     </div>   
     </section>
+    <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+            import { getAuth,
+                signInWithEmailAndPassword,
+                onAuthStateChanged,
+                signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"
+            
+            const firebaseConfig = {
+            apiKey: "AIzaSyAGzcLtpACZdiNnFnQq83iiu1DTTtUOOZc",
+            authDomain: "kcs-website-e2909.firebaseapp.com",
+            databaseURL: "https://kcs-website-e2909-default-rtdb.firebaseio.com",
+            projectId: "kcs-website-e2909",
+            storageBucket: "kcs-website-e2909.appspot.com",
+            messagingSenderId: "44532491992",
+            appId: "1:44532491992:web:986fc4403b472eeb1f99ad",
+            measurementId: "G-HDNR4CQYD4"
+        };
+
+            const app = initializeApp(firebaseConfig);
+            const auth = getAuth(app);
+            
+            const userEmail = document.querySelector("#email");
+            const userPassword = document.querySelector("#password");
+            const authForm = document.querySelector("#sign-in-form");
+            const signInBtn = document.querySelector("#sign-in-btn");
+
+            authForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const signInEmail = userEmail.value;
+                const signInPassword = userPassword.value;
+
+                signInWithEmailAndPassword(auth, signInEmail, signInPassword)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    console.log("Sign in successful (thank fuck): ", user);
+                    window.location.href = 'admindashboard.html';
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    console.error("Error signing in: ", errorCode, errorMessage);
+                });
+            });
+
+    </script>
     <script src="./index.js"></script>
 </body>
 </html>
