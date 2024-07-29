@@ -6,365 +6,106 @@
     <title>School Board | Kihei Charter</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://firebasestorage.googleapis.com; connect-src 'self' https://www.gstatic.com https://firebasestorage.googleapis.com https://firestore.googleapis.com;">
 </head>
 <body>
-                    <!--NAVBAR-->
-
-                    <header class="header">
-                        <nav class="nav container">
-                            <div class="nav_data">
-                                <a href="../index.html" class="nav_logo">
-                                    <img src="../assets/smalltranspartentlogo.png" alt="logo">Kihei Charter School
-                                </a>
-                
-                                <!--BURGER MENU-->
-                
-                                <div class="nav_toggler" id="nav-toggler">
-                                    <i class="ri-menu-line nav_burger"></i>
-                                    <i class="ri-close-line nav_close"></i>
-                                </div>
-                            </div>
-                
-                            <!--NAV ITEMS/SUBMENUS-->
-                
-                            <div class="nav_menu" id="nav-menu">
-                                <ul class="nav_list">
-                                    <li>
-                                        <a href="./announcements.html" class="nav_link">Announcements</a>
-                                    </li>
-                                    <li class="dropdown_item">
-                                        <div class="nav_link">About
-                                            <i class="ri-arrow-down-s-line dropdown_arrow"></i>
-                                        </div>
-                                    <ul class="dropdown_menu">
-                                        <li>
-                                            <a href="../index.html#about-section" class="dropdown_link">About KCS</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://kiheicharter.org/sites/default/files/2023-12/23-%2724%20Student%20Handbook_0.pdf" target="_blank" class="dropdown_link">Student Handbook</a>
-                                        </li>
-                                        <li>
-                                            <a href="../index.html#academic-section" class="dropdown_link">Academics</a>
-                                        </li>
-                                        <li>
-                                            <a href="./adminsupportstaff.html" class="dropdown_link">Administration/Support Staff</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://kiheicharter.org/sites/default/files/2018-03/Hawaii%20DOE%20_%20Student%20Privacy.pdf" target="_blank" class="dropdown_link">FERPA</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://kiheicharter.org/sites/default/files/2022-02/Wellness%20Policy%20for%20Kihei%20Charter%20School%2040918.pdf" target="_blank" class="dropdown_link">Wellness Policy</a>
-                                        </li>
-                                    </ul>
-                                    </li>
-                                    <li class="dropdown_item">
-                                        <div class="nav_link">School
-                                            <i class="ri-arrow-down-s-line dropdown_arrow"></i>
-                                        </div>
-                                        <ul class="dropdown_menu">
-                                            <li class="dropdown_subitem">
-                                                <div class="dropdown_link">
-                                                    Elementary School <i class="ri-add-line dropdown_add"></i>
-                                                </div>
-                                                <ul class="dropdown_submenu">
-                                                    <li>
-                                                        <a href="./elementarystaff.html" class="dropdown_sublink">
-                                                        Elementary School Staff
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="./elementary.html" class="dropdown_sublink">
-                                                            Calendar/Contacts
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="https://kiheicharter.org/sites/default/files/2023-06/K-5%20Supply%20Lists%202023-2024.pdf" target="_blank" class="dropdown_sublink">
-                                                            K-5 Supply Lists
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown_subitem">
-                                                <div class="dropdown_link">
-                                                    Middle School <i class="ri-add-line dropdown_add"></i>
-                                                </div>
-                                                <ul class="dropdown_submenu">
-                                                    <li>
-                                                        <a href="./middlestaff.html" class="dropdown_sublink">
-                                                        Middle School Staff
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="./middle.html" class="dropdown_sublink">
-                                                            Calendar/Contacts
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="https://kiheicharter.org/sites/default/files/2023-06/6-8%2023-24%20School%20Supply%20List.pdf" target="_blank" class="dropdown_sublink">
-                                                            6th-8th Supply Lists
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown_subitem">
-                                                <div class="dropdown_link">
-                                                    High School <i class="ri-add-line dropdown_add"></i>
-                                                </div>
-                                                <ul class="dropdown_submenu">
-                                                    <li>
-                                                        <a href="./pages/highstaff.html" class="dropdown_sublink">
-                                                        High School Staff
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="./highclubs.html" class="dropdown_sublink">
-                                                            High School Calendar & Clubs
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="https://id.naviance.com/samlsso?institutionId=7803952DUS&userType=student" target="_blank" class="dropdown_sublink">
-                                                           Naviance
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown_subitem">
-                                                <div class="dropdown_link">
-                                                    Calendars <i class="ri-add-line dropdown_add"></i>
-                                                </div>
-                                                <ul class="dropdown_submenu">
-                                                    <li>
-                                                        <a href="https://kiheicharter.org/sites/default/files/2023-09/SY%202023-2024%20UPDATED%20KCS%20Calendar.pdf" target="_blank" class="dropdown_link">Schoolwide Calendar</a>    
-                                                    </li>
-                                                    <li>
-                                                        <a href="./elemcalendar.html" class="dropdown_link">Elementary Calendar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="./middlecalendar.html" class="dropdown_link">Middle School Calendar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="./highcalendar.html" class="dropdown_link">High School Calendar</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="./schoolenrollment.html" class="dropdown_link">Enrollment</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://kiheicharter.org/sites/default/files/2024-01/KCS%20Lunch%20Menu%202024%20FEB.pdf" target="_blank" class="dropdown_link">School Meals</a>
-                                            </li>
-                
-                                        </ul></li> 
-                                    <li class="dropdown_item">
-                                        <div class="nav_link">Join Our Team
-                                            <i class="ri-arrow-down-s-line dropdown_arrow"></i>
-                                        </div>
-                                        <ul class="dropdown_menu">
-                                            <li>
-                                                <a href="./employment.html" class="dropdown_link">Employment</a>
-                                            </li>
-                                            <li>
-                                                <a href="./escript.html" class="dropdown_link">E-Script</a>
-                                            </li>
-                                        </ul></li>
-                                        <li class="dropdown_item">
-                                            <div class="nav_link">Sports
-                                                <i class="ri-arrow-down-s-line dropdown_arrow"></i>
-                                            </div>
-                                            <ul class="dropdown_menu">
-                                                <li>
-                                                    <a href="./athletics.html" class="dropdown_link">Athletics</a>
-                                                </li>
-                                                <li>
-                                                    <a href="https://milsports.org/schedules" target="_blank" class="dropdown_link">Schedules & Results</a>
-                                                </li>
-                                                <li>
-                                                    <a href="./coaches.html" class="dropdown_link">Coaches</a>
-                                                </li>
-                                                <li class="dropdown_subitem">
-                                                    <div class="dropdown_link">
-                                                        Athelete Handbook/Forms
-                                                        <i class="ri-add-line dropdown_add"></i>
-                                                    </div>
-                                                    <ul class="dropdown_submenu">
-                                                        <li>
-                                                            <a href="https://kiheicharter.org/sites/default/files/2022-01/2021-22-Parent-Athlete-Resource-Guide-%2810-5-21%29.pdf" target="_blank" class="dropdown_link">
-                                                                Parent-Athlete-Resource-Guide
-                                                            </a>
-                                                        </li>
-                
-                                                        <li>
-                                                            <a href="https://kiheicharter.org/sites/default/files/2022-01/Club%20Sports%20Waiver%20and%20Physical%20Forms.pdf" target="_blank" class="dropdown_link">
-                                                            Club Sports Waiver and Physical Forms
-                                                            </a>
-                                                        </li>
-                
-                                                        <li>
-                                                            <a href="https://kiheicharter.org/sites/default/files/2022-01/Student%20Participation%20and%20Parent%20Consent%20Form.pdf" class="dropdown_link" target="_blank">
-                                                                Student Participation and Parent Consent Form
-                                                            </a>
-                                                        </li>
-                
-                                                        <li>
-                                                            <a href="https://kiheicharter.org/sites/default/files/2022-01/Physical%20Exam%26%20Concussion%20Mgmt%20Form.pdf" class="dropdown_link" target="_blank">
-                                                                Physical Exam & Concussion Management Form
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="./sharkcage.html" class="dropdown_link">Shark Cage</a>
-                                                </li>
-                                                <li>
-                                                    <a href="https://sideline.bsnsports.com/schools/hawaii/kihei/kihei-charter-high-school" target="_blank" class="dropdown_link">Sideline Store</a>
-                                                </li>
-                                            </ul></li>         
-                                        <li>
-                                            <a href="./schoolboard.html" class="nav_link">School Board</a>
-                                        </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </header>
-            
-                    <div class="banner">
-                        <h2 class="slideUp" animated="true">School Board</h2>
-                    </div>
-                    <div class="content_container">
-                        <div class="wide_card">
-                            <h4 class="centered_text">
-                                The Kihei Charter School Local School Board meetings are held at 4:00pm at the Lipoa campus.
-                                <br><br>
-                                As one of 32 charter schools in the state of Hawaii, Kihei Charter School is managed and operated by a local school board made of community members.
-                                <br><br>
-                                Board meetings are open to the public and are held quarterly in the SMLO conference room on the third floor of the school next to the deck.
-                            </h4>
-                            <div class="table_container">
-                                <h4 class="centered_text">Current Local Board Members</h4>
-                                <table class="board_table tbl">
-                                    <thead>
-                                        <tr>
-                                            <th>Member</th>
-                                            <th>Email</th>
-                                            <th>Position</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td tbl_lbl="Member">Michael Sweeney</td>
-                                            <td tbl_lbl="Email"><a href="mailto:mjseeney08@gmail.com">mjsweeney08@gmail.com</a></td>
-                                            <td tbl_lbl="Position">Chair</td>
-                                        </tr>
-                                        <tr>
-                                            <td tbl_lbl="Member">Steve Perkins</td>
-                                            <td tbl_lbl="Email"><a href="mailto:steven_perkins@yahoo.com">steven_perkins@yahoo.com</a></td>
-                                            <td tbl_lbl="Position">Director</td>
-                                        </tr>
-                                        <tr>
-                                            <td tbl_lbl="Member">Gene Zarro</td>
-                                            <td tbl_lbl="Email"><a href="mailto:genezarro@gmail.com">genezarro@gmail.com</a></td>
-                                            <td tbl_lbl="Position">Vice-Chair</td>
-                                        </tr>
-                                        <tr>
-                                            <td tbl_lbl="Member">Richard Kehoe</td>
-                                            <td tbl_lbl="Email"><a href="mailto:richardkehoe@maui.net">richardkehoe@maui.net</a></td>
-                                            <td tbl_lbl="Position">Director</td>
-                                        </tr>
-                                        <tr>
-                                            <td tbl_lbl="Member">Todd Lawson</td>
-                                            <td tbl_lbl="Email"><a href="mailto:todd.lawson@galapagosllc.com">todd.lawson@galapagosllc.com</a></td>
-                                            <td tbl_lbl="Position">Treasurer</td>
-                                        </tr>
-                                        <tr>
-                                            <td tbl_lbl="Member">Brandy Cajudoy</td>
-                                            <td tbl_lbl="Email"><a href="mailto:cajudoy@yahoo.com">cajudoy@yahoo.com</a></td>
-                                            <td tbl_lbl="Position">Secretary</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="btn_container app_btn_container">
-                                <a href="https://kiheicharter.org/sites/default/files/2017-10/2015%20kcs%20policies.pdf" target="_blank">
-                                    <div class="btn board_btn">
-                                        Board Policies
-                                    </div>
-                                </a>
-                                <a href="https://kiheicharter.org/sites/default/files/2017-10/complaint.pdf" target="_blank">
-                                    <div class="btn board_btn">
-                                        Complaint Policies
-                                    </div>
-                                </a>
-                            </div> 
-                            <h3 class="centered_text">
-                                Past and Current Years' Board Minutes
-                            </h3>
-                            <div class="board_minute_archive_container">
-                                <a href="http://kiheicharter.org/sites/default/files/2019-12/2015%20KCS%20Agenda%20November%2018th.pdf" target="_blank">Sample Agenda</a>
-                                <a href="https://kiheicharter.org/sites/default/files/2024-02/2023%20October%2018%20KCS%20minutes.pdf" target="_blank">October 18, 2023</a>
-                                <a href="https://kiheicharter.org/sites/default/files/2023-09/Board%20Minutes%202022.pdf" target="_blank">January - April 2022</a>
-                                <a href="https://kiheicharter.org/sites/default/files/2021-08/Jan-Jul%202021.pdf" target="_blank">January - July 2021</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2020-12/April%202019-October%202020.pdf" target="_blank">April 2019 - October 2020</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2020-02/3519.pdf" target="_blank">03-05-19</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2020-02/Minutes%20of%20January%2015%2C%202019.pdf" target="_blank">01-15-19</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2019-09/SY%202018-19_0.pdf" target="_blank">SY 2018-19</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2019-09/SY%202018-19.pdf" target="_blank">SY 2017-18</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2017-10/BOE%202016_0.pdf" target="_blank">SY 2016-17</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2017-10/BOE%202015.pdf" target="_blank">SY 2015</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2017-10/SY-14.pdf" target="_blank">SY 2014</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2017-10/BOE%202013.pdf" target="_blank">SY 2013</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2017-10/BOE%202012.pdf" target="_blank">SY 2012</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2017-10/SY-10-11.pdf" target="_blank">SY 2010-11</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2017-10/SY-09-10.pdf" target="_blank">SY 2009-10</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2017-10/SY-08-09.pdf" target="_blank">SY 2008-09</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2017-10/SY-06-07.pdf" target="_blank">SY 2006-07</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2017-10/SY-05-06.pdf" target="_blank">SY 2005-06</a>
-                                <a href="http://kiheicharter.org/sites/default/files/2017-10/SY-04-05.pdf" target="_blank">SY 2004-05</a>
-                            </div>       
-                        </div>
-                    </div>
-                    <section class="footer_section" id="footer-section">
-                        <div class="footer_container">
-                            <div class="footer_col footer_logo_col">
-                                <img class="footer_logo" src="../assets/smalltranspartentlogo.png" alt="logoimage">
-                              <!-- <p class="slogan">Innovative 21st Century Public Education</p> -->
-                            </div>
-                            <div class="footer_col">
-                                <ul>
-                                    <li><a href="./announcements.html">Announcements</a></li>
-                                    <li><a href="../index.html#academic-section">Academics</a></li>
-                                    <li><a href="./adminsupportstaff.html">Administration</a></li>
-                                    <li><a href="https://kiheicharter.org/sites/default/files/2023-09/SY%202023-2024%20UPDATED%20KCS%20Calendar.pdf" target="_blank">Calendar</a></li>
-                                </ul> 
-                            </div>
-                            <div class="footer_col">
-                              
-                                <ul>
-                                    <li><a href="./elementary.html">Elementary</a></li>
-                                    <li><a href="./middle.html">Middle School</a></li>
-                                    <li><a href="./highclubs.html">High School</a></li>
-                                    <li><a href="https://kiheicharter.org/sites/default/files/2024-01/KCS%20Lunch%20Menu%202024%20FEB.pdf" target="_blank">School Meals</a></li>
-                                </ul> 
-                            </div>
-                            <div class="footer_col">
-                                <ul>
-                                    <li><a href="../index.html">Home</a></li>
-                                    <li><a href="../index.html#about-section">About</a></li>
-                                    <li><a href="./employment.html">Employment</a></li>
-                                    <li><a href="./schoolboard.html">School Board</a></li>
-                                </ul> 
-                            </div>
-                        </div>
-                    <hr class="footer_break">
-                    <div class="footer_container footer_bottom">
-                        <div class="media_icons">
-                            <a href="https://www.facebook.com/p/Kihei-Charter-School-K-12-100063998353956/" target="_blank"><i class="ri-facebook-circle-fill"></i></a>
-                            <a href="https://www.instagram.com/kchstigersharks/" target="_blank"><i class="ri-instagram-fill"></i></a>
-                        </div>
-                            <p class="footer_legal">&#169; 2024 Kihei Charter School. All Rights Reserved - P: 808-875-0700 - F: 808-874-6745 - Kihei Charter School is a Public School, Grades K-12, Serving all of Maui<br>
-                                (Mailing Address) PO BOX 1098 Kihei Hi. 96753 (Physical Address) 650 Lipoa Parkway Kihei Hawaii 96753</p>
-                    </div>   
-                    </section>
-    
+<div id="navbar"></div>
+<div class="banner">
+    <h2 class="slideUp" animated="true">School Board</h2>
+</div>
+<div class="content_container">
+    <div class="wide_card">
+        <h4 class="centered_text">
+        The Kihei Charter School Local School Board meetings are held at 4:00pm at the Lipoa campus.
+        <br><br>
+        As one of 32 charter schools in the state of Hawaii, Kihei Charter School is managed and operated by a local school board made of community members.
+        <br><br>
+        Board meetings are open to the public and are held quarterly in the SMLO conference room on the third floor of the school next to the deck.
+        </h4>
+        <div class="table_container">
+            <h4 class="centered_text">Current Local Board Members</h4>
+            <table class="board_table tbl">
+                <thead>
+                    <tr>
+                        <th>Member</th>
+                        <th>Email</th>
+                        <th>Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td tbl_lbl="Member">Michael Sweeney</td>
+                        <td tbl_lbl="Email"><a href="mailto:mjseeney08@gmail.com">mjsweeney08@gmail.com</a></td>
+                        <td tbl_lbl="Position">Chair</td>
+                    </tr>
+                    <tr>
+                        <td tbl_lbl="Member">Steve Perkins</td>
+                        <td tbl_lbl="Email"><a href="mailto:steven_perkins@yahoo.com">steven_perkins@yahoo.com</a></td>
+                        <td tbl_lbl="Position">Director</td>
+                    </tr>
+                    <tr>
+                        <td tbl_lbl="Member">Gene Zarro</td>
+                        <td tbl_lbl="Email"><a href="mailto:genezarro@gmail.com">genezarro@gmail.com</a></td>
+                        <td tbl_lbl="Position">Vice-Chair</td>
+                    </tr>
+                    <tr>
+                        <td tbl_lbl="Member">Richard Kehoe</td>
+                        <td tbl_lbl="Email"><a href="mailto:richardkehoe@maui.net">richardkehoe@maui.net</a></td>
+                        <td tbl_lbl="Position">Director</td>
+                    </tr>
+                    <tr>
+                        <td tbl_lbl="Member">Todd Lawson</td>
+                        <td tbl_lbl="Email"><a href="mailto:todd.lawson@galapagosllc.com">todd.lawson@galapagosllc.com</a></td>
+                        <td tbl_lbl="Position">Treasurer</td>
+                    </tr>
+                    <tr>
+                        <td tbl_lbl="Member">Brandy Cajudoy</td>
+                        <td tbl_lbl="Email"><a href="mailto:cajudoy@yahoo.com">cajudoy@yahoo.com</a></td>
+                        <td tbl_lbl="Position">Secretary</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="btn_container app_btn_container">
+            <a href="https://kiheicharter.org/sites/default/files/2017-10/2015%20kcs%20policies.pdf" target="_blank">
+                <div class="btn board_btn">
+                Board Policies
+                </div>
+            </a>
+            <a href="https://kiheicharter.org/sites/default/files/2017-10/complaint.pdf" target="_blank">
+                <div class="btn board_btn">
+                Complaint Policies
+                </div>
+            </a>
+        </div> 
+        <h3 class="centered_text">
+        Past and Current Years' Board Minutes
+        </h3>
+        <div class="board_minute_archive_container">
+            <a href="http://kiheicharter.org/sites/default/files/2019-12/2015%20KCS%20Agenda%20November%2018th.pdf" target="_blank">Sample Agenda</a>
+            <a href="https://kiheicharter.org/sites/default/files/2024-02/2023%20October%2018%20KCS%20minutes.pdf" target="_blank">October 18, 2023</a>
+            <a href="https://kiheicharter.org/sites/default/files/2023-09/Board%20Minutes%202022.pdf" target="_blank">January - April 2022</a>
+            <a href="https://kiheicharter.org/sites/default/files/2021-08/Jan-Jul%202021.pdf" target="_blank">January - July 2021</a>
+            <a href="http://kiheicharter.org/sites/default/files/2020-12/April%202019-October%202020.pdf" target="_blank">April 2019 - October 2020</a>
+            <a href="http://kiheicharter.org/sites/default/files/2020-02/3519.pdf" target="_blank">03-05-19</a>
+            <a href="http://kiheicharter.org/sites/default/files/2020-02/Minutes%20of%20January%2015%2C%202019.pdf" target="_blank">01-15-19</a>
+            <a href="http://kiheicharter.org/sites/default/files/2019-09/SY%202018-19_0.pdf" target="_blank">SY 2018-19</a>
+            <a href="http://kiheicharter.org/sites/default/files/2019-09/SY%202018-19.pdf" target="_blank">SY 2017-18</a>
+            <a href="http://kiheicharter.org/sites/default/files/2017-10/BOE%202016_0.pdf" target="_blank">SY 2016-17</a>
+            <a href="http://kiheicharter.org/sites/default/files/2017-10/BOE%202015.pdf" target="_blank">SY 2015</a>
+            <a href="http://kiheicharter.org/sites/default/files/2017-10/SY-14.pdf" target="_blank">SY 2014</a>
+            <a href="http://kiheicharter.org/sites/default/files/2017-10/BOE%202013.pdf" target="_blank">SY 2013</a>
+            <a href="http://kiheicharter.org/sites/default/files/2017-10/BOE%202012.pdf" target="_blank">SY 2012</a>
+            <a href="http://kiheicharter.org/sites/default/files/2017-10/SY-10-11.pdf" target="_blank">SY 2010-11</a>
+            <a href="http://kiheicharter.org/sites/default/files/2017-10/SY-09-10.pdf" target="_blank">SY 2009-10</a>
+            <a href="http://kiheicharter.org/sites/default/files/2017-10/SY-08-09.pdf" target="_blank">SY 2008-09</a>
+            <a href="http://kiheicharter.org/sites/default/files/2017-10/SY-06-07.pdf" target="_blank">SY 2006-07</a>
+            <a href="http://kiheicharter.org/sites/default/files/2017-10/SY-05-06.pdf" target="_blank">SY 2005-06</a>
+            <a href="http://kiheicharter.org/sites/default/files/2017-10/SY-04-05.pdf" target="_blank">SY 2004-05</a>
+        </div>       
+    </div>
+</div>
+<div id="footer"></div>
 <script src="../index.js"></script>    
 </body>
 </html>

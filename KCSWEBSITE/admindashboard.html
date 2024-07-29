@@ -4,8 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard | Kihei Charter School</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-    
+<div id="navbar"></div>
+    <div class="banner">
+        <h2>Admin Tools</h2>
+    </div>
+<div class="admin_panel_top">
+        <h2 id="welcomeMessage">
+        Welcome: Admin
+        </h2>
+        <button class="btn" id="logout-btn">
+        Logout
+        </button>  
+</div>
+<div class="admin_tool_container">
+    <div class="admin_container">
+        <div class="admin_tool_header">
+            <h2>Edit HTML</h2>
+            <div>
+                <label for="page-select">
+                    Select Page:
+                </label>
+                <select id="page-select">
+                    <option value="index.html">Home</option>
+                    <option value="./pages/announcements.html">Announcements</option>
+                    <option value="./pages/athletics.html">Athletics</option>
+                    <option value="./pages/adminsupportstaff.html">Administration & Support Staff</option>
+                    <option value="./pages/coaches.html">Coaches</option>
+                    <option value="./pages/schoolenrollment.html">Enrollment</option>
+                    <option value="./pages/elementary.html">Elementary School</option>
+                    <option value="./pages/elemcalendar.html">Elementary Calendar</option>
+                    <option value="./pages/elementarystaff.html">Elementary Staff</option>
+                    <option value="./pages/employment.html">Employment</option>
+                    <option value="./pages/escript.html">Escript</option>
+                    <option value="./pages/highclubs.html">High School</option>
+                    <option value="./pages/highcalendar.html">High School Calendar</option>
+                    <option value="./pages/highstaff.html">High School Staff</option>
+                    <option value="./pages/middle.html">Middle School</option>
+                    <option value="./pages/middlecalendar.html">Middle School Calendar</option>
+                    <option value="./pages/middlestaff.html">Middle School Staff</option>
+                    <option value="./pages/schoolboard.html">School Board</option>
+                    <option value="./pages/sharkcage.html">Shark Cage</option>
+                </select>    
+        </div>
+        </div>
+        <div id="content-edit-area">
+        </div>
+        <button id="save-changes-btn">Save Changes</button>        
+    </div>
+    <div class="admin_container">
+        <div class="admin_tool_header">
+            <h2>Edit CSS</h2>
+        </div>
+        <textarea id="css-editor" placeholder="Enter CSS here..."></textarea>
+        <div class="css_btn_container">
+            <button id="validate-css-btn">Validate CSS</button>
+            <button id="save-css-btn">Save CSS Changes</button>        
+        </div> 
+    </div>
+    <div class="admin_container">
+        <div class="admin_tool_header">
+            <h2>Manage Images</h2>
+            <input type="file" id="image-upload" accept="image/*">
+        </div>
+        <div class="image-preview" id="image-preview">
+        </div>
+        <button id="upload-image-btn">Upload Image</button>    
+    </div>
+</div>
+<div id="footer"></div>
+<script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js"></script>
+<script type="module" src="./assets/libs/cssbeautify/cssbeautify.js"></script>
+<script type="module" src="./admindashboard.js"></script>
+<script src="./index.js"></script>
 </body>
 </html>

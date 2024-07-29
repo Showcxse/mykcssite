@@ -1,18 +1,53 @@
-//Event to toggle nav bar states
+const loadHTML = (divID, fileName, callback) => {
+    fetch(fileName)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(divID).innerHTML = data;
+            if (callback) {
+                callback();
+            }
+        })
+        .catch(error => console.error("HTML loading fucked up", error));
+}
+
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId);
 
-    toggle.addEventListener('click', () => {
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
             nav.classList.toggle('show-menu');
             toggle.classList.toggle('show-icon');
-    
         });
     }
+}
 
-showMenu('nav-toggler', 'nav-menu');
+const initDropdowns = () => {
+    const dropdownItems = document.querySelectorAll('.dropdown_item');
+    dropdownItems.forEach(item => {
+    item.addEventListener('click', () => {
+        toggleDropdown(item, 'dropdown_menu', 'dropdown_arrow');
+    });
+});
 
-// Stupid fucking events for stupid fucking mobile users
+    const dropdownSubItems = document.querySelectorAll('.dropdown_subitem');
+    dropdownSubItems.forEach(item => {
+    item.addEventListener('click', (event) => {
+        event.stopPropagation();
+        toggleDropdown(item, 'dropdown_submenu', 'dropdown_arrow');
+    });
+});
+}
+
+const initCards = () => {
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('flip_card')
+    });
+});
+}
+
 const toggleDropdown = (item, dropdownClass, arrowClass) => {
     item.classList.toggle('active');
     const dropdownElement = item.querySelector(`.${dropdownClass}`);
@@ -23,31 +58,23 @@ const toggleDropdown = (item, dropdownClass, arrowClass) => {
             arrowIcon.classList.toggle('rotate-arrow');
         }
     }
-};
+}
 
-const dropdownItems = document.querySelectorAll('.dropdown_item');
-dropdownItems.forEach(item => {
-    item.addEventListener('click', () => {
-        toggleDropdown(item, 'dropdown_menu', 'dropdown_arrow');
+window.addEventListener('DOMContentLoaded', (event) => {
+    const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('adminlogin.html') || window.location.pathname.endsWith('admindashboard.html');
+    const navBarFile = isHomePage ? './pages/nav-home.html' : 'nav-pages.html';
+    const footerFile = isHomePage ? './pages/footer-home.html' : 'footer-pages.html';
+
+
+    loadHTML('navbar', navBarFile, () => {
+        showMenu('nav-toggler', 'nav-menu');
+        initDropdowns();
+        initCards();
     });
+    loadHTML('footer', footerFile);
 });
 
-const dropdownSubItems = document.querySelectorAll('.dropdown_subitem');
-dropdownSubItems.forEach(item => {
-    item.addEventListener('click', (event) => {
-        event.stopPropagation();
-        toggleDropdown(item, 'dropdown_submenu', 'dropdown_arrow');
-    });
-});
-//Event to flip .card elements
-const cards = document.querySelectorAll('.card');
-cards.forEach(card => {
-    card.addEventListener('click', () => {
-        card.classList.toggle('flip_card')
-    });
-})
 //Functions to animated elements and to make sure they only fire when they are on screen
-document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((elements, observer) => {
         elements.forEach((element) => {
             if (element.isIntersecting) {
@@ -62,6 +89,5 @@ document.addEventListener('DOMContentLoaded', () => {
     elementsToAnimate.forEach((element) => {
         observer.observe(element);
     });
-});
 
 
