@@ -75,6 +75,17 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    async function loadCSS() {
+        const cssRef = doc(db, 'styles', 'style.css');
+        const cssSnap = await getDoc(cssRef);
+
+        if (cssSnap.exists()) {
+            cssEditor.value = cssSnap.data().content;
+        }  else {
+            console.log('CSS file does not exist');
+        }
+    }
 })
 
 

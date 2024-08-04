@@ -6,7 +6,15 @@
     <title>Announcements | Kihei Charter School</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://firebasestorage.googleapis.com; connect-src 'self' https://www.gstatic.com https://firebasestorage.googleapis.com https://firestore.googleapis.com;">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://www.gstatic.com https://www.googleapis.com;
+    style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+    font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com;
+    img-src 'self' data:;
+    connect-src 'self' https://www.googleapis.com https://firebase.googleapis.com https://firestore.googleapis.com;
+    frame-src 'self';
+">
 </head>
 <body>
 <div id="navbar"></div>
@@ -22,12 +30,12 @@
         <div class="announcement_card_container">
             <div class="announcement_card large_announcement_card slideUp" animated="true">
                 <h4>Prom 2024</h4>
-                <img class="announcement_img" src="../assets/promad.jpg" alt="announcementimage">
+                <img class="announcement_img" src="../assets/announcements/promad.jpg" alt="announcementimage">
                 <p class="centered_text">Information for the upcoming 2024 prom</p>
             </div>
             <div class="announcement_card large_announcement_card slideUp" animated="true">
                 <h4>2024-2025 Enrollment</h4>
-                <img class="announcement_img" src="../assets/Enrollmentannouncement.png" alt="announcementimage">
+                <img class="announcement_img" src="../assets/announcements/Enrollmentannouncement.png" alt="announcementimage">
                 <p class="centered_text">Information for those interested in enrolling for the 2024-2025 school year</p>
             </div>
             <div class="announcement_card small_announcement_card slideUp" animated="true">
@@ -38,7 +46,7 @@
             </div>
             <div class="announcement_card large_announcement_card slideUp" animated="true">
                 <h4>Upcoming KCS Luau</h4>
-                <img class="announcement_img" src="../assets/Luau.jpg" alt="announcementimage">
+                <img class="announcement_img" src="../assets/announcements/Luau.jpg" alt="announcementimage">
                 <p class="centered_text">Some information for the upcoming 2024 KCS Luau</p>
             </div>
             <div class="announcement_card small_announcement_card slideUp" animated="true">
