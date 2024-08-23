@@ -20,11 +20,11 @@
         Logout
         </button>  
 </div>
-<div class="admin_tool_container">
-    <div class="admin_container">
+<div class="editor_container">
+    <div class="editor html_editor">
         <div class="admin_tool_header">
             <h2>Edit HTML</h2>
-            <div>
+            <div class="page_selector">
                 <label for="page-select">
                     Select Page:
                 </label>
@@ -49,38 +49,34 @@
                     <option value="./pages/schoolboard.html">School Board</option>
                     <option value="./pages/sharkcage.html">Shark Cage</option>
                 </select>    
+            </div>
         </div>
-        </div>
-        <div id="content-edit-area">
-        </div>
+        <textarea id="content-edit-area" class="code_area" placeholder="Select a page to edit its html"></textarea>
+        <button id="validate-html-btn">Validate HTML</button>
         <button id="save-changes-btn">Save Changes</button>        
     </div>
-    <div class="admin_container">
+    <div class="editor css_editor">
         <div class="admin_tool_header">
             <h2>Edit CSS</h2>
         </div>
-        <textarea id="css-editor" placeholder="Enter CSS here..."></textarea>
-        <div class="css_btn_container">
-            <button id="validate-css-btn">Validate CSS</button>
-            <button id="save-css-btn">Save CSS Changes</button>        
-        </div> 
+        <textarea id="css-editor" class="code_area" placeholder="Enter CSS here..."></textarea>
+        <button id="validate-css-btn">Validate CSS</button>
+        <button id="save-css-btn">Save CSS Changes</button>        
     </div>
-    <div class="admin_container">
-        <div class="admin_tool_header">
-            <h2>Manage Images</h2>
-            <input type="file" id="image-upload" accept="image/*">
+    <div class="image_manager">
+        <h2>Manage Images</h2>
+        <input type="file" id="image-upload" accept="image/*">
+        <div id="image-preview" class="image_preview"></div>
+        <div id="image-popup-background" class="popup_background">
+            <img id="image-popup" class="popup_image">
         </div>
-        <div class="image-preview" id="image-preview">
-        </div>
-        <button id="upload-image-btn">Upload Image</button>    
+        <button id="upload-image-btn">Upload Image</button>
+        <button id="delete-selected">Delete Selected Images</button>
     </div>
 </div>
 <div id="footer"></div>
-<script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
-<script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
-<script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
-<script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js"></script>
-<script type="module" src="./assets/libs/cssbeautify/cssbeautify.js"></script>
+<script type="module" src="firebase-setup.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.15.1/beautify-html.min.js"></script>
 <script type="module" src="./admindashboard.js"></script>
 <script src="./index.js"></script>
 </body>

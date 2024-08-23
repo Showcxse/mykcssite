@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "command": "node",
+    "type": "shell",
+    "args": [
+        "--harmony"
+    ],
+
+    "tasks": [
+        {   
+            "type": "process",
+            "label": "runFile",
+            "suppressTaskName": true,
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": "$jshint",
+            "args": ["${file}"]
+        }
+    ]
+}

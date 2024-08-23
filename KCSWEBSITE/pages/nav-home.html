@@ -102,8 +102,6 @@
                                     High School <i class="ri-add-line dropdown_add"></i>
                                 </div>
                                 <ul class="dropdown_submenu">
-                                    const dropdownSubItems = document.querySelectorAll('.dropdown_subitem'); dropdownSubItems.forEach(item => { item.addEventListener('click', (event) => { event.stopPropagation(); toggleDropdown(item, 'dropdown_submenu', 'dropdown_arrow'); }); }); //Event to flip .card elements const cards = document.querySelectorAll('.card'); cards.forEach(card => { card.addEventListener('click', () => { card.classList.toggle('flip_card') }); }) //Functions to animated elements and to make sure they only fire when they are on screen document.addEventListener('DOMContentLoaded', () => { const observer = new IntersectionObserver((elements, observer) => { elements.forEach((element) => { if (element.isIntersecting) { console.log("it's working delete me if you see this"); element.target.classList.add('visible'); observer.unobserve(element.target); } }); }, {threshold: 0.35});
-
                                     <li>
                                         <a href="./pages/highstaff.html" class="dropdown_sublink">
                                         High School Staff
