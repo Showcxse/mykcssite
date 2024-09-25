@@ -6,40 +6,66 @@
     <title>Kihei Charter School</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
-    <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    script-src 'self' https://www.gstatic.com https://www.googleapis.com;
-    style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
-    font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com;
-    img-src 'self' data:;
-    connect-src 'self' https://www.googleapis.com https://firebase.googleapis.com https://firestore.googleapis.com;
-    frame-src 'self';
-">
 </head>
 <body>
     <div id="navbar"></div>
 <!--Main landing section-->
     <section class="hero_section" id="hero-section">
-            <div class="title_wrapper slideUp" animated="true">
-                <h1>Kihei Charter School</h1>
-                <h2>Innovative 21st Century Public Education</h2>
-                <div class="btn_container" id="landing-btn-container">
-                    <a href="./pages/announcements.html">
-                        <div class="btn" id="landing-btn">
-                        Announcements
-                        </div>
-                    </a>
-                    <a href="#about-section">
-                        <div class="btn" id="landing-btn">
-                        About KCS
-                        </div>
-                    </a>
-                </div>
+        <div class="title_wrapper slideUp" animated="true">
+            <h1>Kihei Charter School</h1>
+            <h2>Innovative 21st Century Public Education</h2>
+            <div class="btn_container" id="landing-btn-container">
+                <a href="./pages/announcements.html">
+                    <div class="btn" id="landing-btn">
+                    Announcements
+                    </div>
+                </a>
+                <a href="#about-section">
+                    <div class="btn" id="landing-btn">
+                    About KCS
+                    </div>
+                </a>
             </div>
-        </section>
+        </div>
+    </section>
+    <section class="news_section" id="news-section">
+        <h2 class="about_header slideUp" animated="true">Recent Announcements</h2>
+        <div class="news_grid">
+            <div class="news_wrapper slideUp" animated="true">
+                <a href="https://firebasestorage.googleapis.com/v0/b/kcs-website-e2909.appspot.com/o/announcements%2F2024%20Ice%20Cream%20Social%20Flyer.pdf?alt=media&token=8c57a896-5bc4-4403-8a21-e2cbbe89147f" target="_blank">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/kcs-website-e2909.appspot.com/o/announcements%2FScreenshot%20from%202024-09-19%2014-21-54.png?alt=media&token=df69c650-5745-4d42-ab51-ed95c83249d7" alt="Announcement Thumbnail" class="news_img">
+                    <h4>Ice Cream Social</h4>
+                </a>
+            </div>
+            <div class="news_wrapper slideUp" animated="true">
+                <a href="https://firebasestorage.googleapis.com/v0/b/kcs-website-e2909.appspot.com/o/announcements%2FKihei%20Charter%20School%20Mail%20-%20Lahaina%20Wildfires%20Anniversary.png?alt=media&token=396e0a2d-73ea-4b99-8afe-0af6936f21c0" target="_blank">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/kcs-website-e2909.appspot.com/o/announcements%2FScreenshot%20from%202024-09-19%2013-52-37.png?alt=media&token=5e63151d-554b-40e3-9dbd-c6a6afedf74c" alt="Announcement Thumbnail" class="news_img">
+                    <h4>Lahaina Wildfires Anniversary</h4>
+                </a>
+            </div>
+            <div class="news_wrapper slideUp" animated="true">
+                <a href="" target="_blank">
+                    <img src="" alt="Announcement Thumbnail" class="news_img">
+                    <h4>WE NEED ANOTHER ANNOUNCEMENT</h4>    
+                </a>
+            </div>
+            <div class="news_wrapper slideUp" animated="true">
+                <a href="https://firebasestorage.googleapis.com/v0/b/kcs-website-e2909.appspot.com/o/announcements%2FWelcome%20Back.pdf?alt=media&token=0a6dd14f-ab75-41fb-a127-ec2daa65fa26" target="_blank">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/kcs-website-e2909.appspot.com/o/announcements%2FScreenshot%20from%202024-09-19%2013-52-37.png?alt=media&token=5e63151d-554b-40e3-9dbd-c6a6afedf74c" alt="Announcement Thumbnail" class="news_img">   
+                    <h4>Welcome Back</h4>
+                </a>
+            </div>
+        </div>
+        <a href="./pages/announcements.html">
+            <div class="btn">
+                More News and Announcements
+            </div>
+        </a>
+        <div class="upside_down_wave"></div>
+    </section>
         <!--About KCS Section-->
     <section class="about_section" id="about-section">
-        <h2 class="about_header slideUp" animated="true">About Kihei Charter School</h2>
+        <h2 class="slideUp" animated="true">About Kihei Charter School</h2>
         <div class="about_card_container">
             <div class="about_card slideUp" animated="true">
                 <h2>About Us</h2>
@@ -58,17 +84,32 @@
             </div> 
         </div>
         <!--Section for school's academic information-->
+        <div class="waves"></div>
         <div class="academic_container" id="academic-section">
-            <h2 class="about_header slideUp" animated="true">Academics</h2>
+            <h2 class="about_header slideUp" animated="true">Academic Programs</h2>
             <p class="quote slideUp" animated="true">“We have an innovation addiction… we can’t catch it, but we must continue to chase it.”<br> - KCS Leadership Team</p>
-            <i class="ri-book-open-fill about_symbol slideUp" animated="true"></i>
+            <div class="course_card_container">
+                <div class="course_card slideUp" animated="true" id="elem-card">
+                    <h3>Elementary School</h3>
+                    <p>Students at Kihei Charter Elementary School thrive in a project-based learning environment, engaging in hands-on, real-world challenges that spark creativity. Classrooms foster collaboration with access to technology, while interdisciplinary projects develop critical thinking, problem-solving, and 21st Century skills for future success.</p>
+                </div>
+                <div class="course_card slideUp" animated="true" id="mid-card">
+                    <h3>Middle School</h3>
+                    <p>At Kihei Charter Middle School, we believe education goes beyond textbooks and tests. We engage students in a dynamic environment focused on project-based and inquiry-based learning. Through hands-on experiences, they solve real-world problems, develop critical thinking, and transition smoothly from elementary to high school.
+                    </p>
+                </div>
+                <div class="course_card slideUp" animated="true" id="high-card">
+                    <h3>High School</h3>
+                    <p>KCS's High School is a high-performing school, with 65% of graduates pursuing college or trade schools. We prepare students with custom programs, experiential learning, and a dual credit partnership with UH Maui College. With a strong athletics department and a 3,000 sq. ft. fab lab, our students are highly engaged and motivated.</p>
+                </div>
+            </div>
             <p class="academic_text slideUp" animated="true">Kihei Charter School has developed innovative academic programs that are centered around choice: individualized learning that is personalized and student-centered. Through cutting-edge curriculum and implementing game-changing technology, KCS is able to nurture a new generation of engaged learners.</p>
             <!--Access for Course Descriptions and Student Handbook-->
             <div class="btn_container" id="about-btn-container">
-                <a href="https://kiheicharter.org/sites/default/files/2023-12/Kihei%20Charter%20High%20School%20Course%20Descriptions%2023_24.pdf" target="_blank">
+                <a href="https://firebasestorage.googleapis.com/v0/b/kcs-website-e2909.appspot.com/o/studenthandbooks%2F'24-'25%20Student%20Handbook.pdf?alt=media&token=755a8d68-4985-413f-b5d3-e07d71f9fcba" target="_blank">
                     <div class="btn academic_btn slideUp" animated="true">Course Descriptions</div>
                 </a>
-                <a href="https://kiheicharter.org/sites/default/files/2023-12/23-%2724%20Student%20Handbook_0.pdf" target="_blank">
+                <a href="https://firebasestorage.googleapis.com/v0/b/kcs-website-e2909.appspot.com/o/studenthandbooks%2F'24-'25%20Student%20Handbook.pdf?alt=media&token=755a8d68-4985-413f-b5d3-e07d71f9fcba" target="_blank">
                     <div class="btn academic_btn slideUp" animated="true">Student Handbook</div>
                 </a>
             </div>

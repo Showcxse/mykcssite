@@ -17,30 +17,37 @@
     <!--Grid layout for schoolwide announcements and news.
     New cards can always be added, and they can be either a regular sized card
     or a larger one (large_announcement_card class)-->
-
+    <div class="announcement_wrapper">
         <div class="announcement_card_container">
             <div class="announcement_card large_announcement_card slideUp" animated="true">
-                <h4>Prom 2024</h4>
-                <img class="announcement_img" src="../assets/announcements/promad.jpg" alt="announcementimage">
-                <p class="centered_text">Information for the upcoming 2024 prom</p>
+                <h4>Annual Ice Cream Social</h4>
+                <a href="https://firebasestorage.googleapis.com/v0/b/kcs-website-e2909.appspot.com/o/announcements%2F2024%20Ice%20Cream%20Social%20Flyer.pdf?alt=media&token=8c57a896-5bc4-4403-8a21-e2cbbe89147f" target="_blank">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/kcs-website-e2909.appspot.com/o/images%2FScreenshot%20from%202024-09-23%2010-26-22.png?alt=media&token=668057a3-1b9d-4b6c-9158-66ccdfb9704e" alt="Announcement Image" class="announcement_img">
+                    <p>Learn more about the upcoming ice cream social here</p>    
+                </a>
             </div>
             <div class="announcement_card large_announcement_card slideUp" animated="true">
-                <h4>2024-2025 Enrollment</h4>
-                <img class="announcement_img" src="../assets/announcements/Enrollmentannouncement.png" alt="announcementimage">
-                <p class="centered_text">Information for those interested in enrolling for the 2024-2025 school year</p>
+                <h4>Shark Discount Card</h4>
+                <a href="" target="_blank">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/kcs-website-e2909.appspot.com/o/images%2Fsharkcard.png?alt=media&token=e5294c7c-637b-41c7-97af-010357f6ebbb" alt="Announcement Image" class="announcement_img">
+                    <p>Get your Shark Discount Card now to receive great discounts and support KCS at the same time!</p>    
+                </a>
+            </div>
+            <div class="announcement_card large_announcement_card slideUp" animated="true">
+                <h4>KCS Hawaiian Lu'au</h4>
+                <a href="" target="_blank">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/kcs-website-e2909.appspot.com/o/images%2FkcsluauOLD.png?alt=media&token=215642f2-47f4-4d4d-9627-d2dcb1065254" alt="Announcement Image" class="announcement_img">
+                    <p>Join us for our 7th Annual KCS Luau. Proceeds go to the KCS Athletics programs</p>    
+                </a>
             </div>
             <div class="announcement_card small_announcement_card slideUp" animated="true">
-                <h4>School Closure January 9, 2024</h4>
-                <p>Due to the heavy rainfall and flooding throughout the island school will be closed today.</p>
+                <h4>Lahaina Wildfires Anniversary</h4>
+                <p>Our school community will honor the anniversary of the Lahaina wildfires on Thursday, August 8th. In observance, we encourage all staff and students to wear Lahaina's colors of red or pink. This gesture will symbolize our solidarity and compassion for those affected by the wildfires. We understand that some families may wish to participate in other community events on this day. Students will be excused from school if families choose to attend these activities</p>
                 <br>
-                <span>January 9, 2024</span>
+                <span>August 5, 2024</span>
             </div>
-            <div class="announcement_card large_announcement_card slideUp" animated="true">
-                <h4>Upcoming KCS Luau</h4>
-                <img class="announcement_img" src="../assets/announcements/Luau.jpg" alt="announcementimage">
-                <p class="centered_text">Some information for the upcoming 2024 KCS Luau</p>
-            </div>
-            <div class="announcement_card small_announcement_card slideUp" animated="true">
+            <!--Last two cards tentatively hidden until we have announcements to announce
+                        <div class="announcement_card small_announcement_card slideUp" animated="true">
                 <h4>School Announcement No Picutre</h4>
                 <p>A bunch of text announcing things that need to be announced. It can be decently long, but should ideally not be any longer than a paragraph. If it pushes the date below the card it's annoying to fix and I don't want to do that.</p>
                 <br>
@@ -52,16 +59,23 @@
                 <br>
                 <span>Date of Announcement</span>
             </div>
+        -->
         </div>
         <!--Small containers for student resources (Front office, absence email, powerschool, etc.)-->
-        <div class="resource_wrapper">
+        <div class="sidebar_right">
             <div class="announcement_col">
                 <div class="resources_container slideUp" animated="true">
                     <h4>Resources</h4>
                     <ul>
+                        <li><a href="https://firebasestorage.googleapis.com/v0/b/kcs-website-e2909.appspot.com/o/calendars%2F2024-2025%20KCS%20Calendar.pdf?alt=media&token=ce8e88b6-8d5e-42ca-a0e3-5b703e09144e" target="_blank">2024-2025 School Calendar</a></li>
                         <li><a href="mailto:attendance@kiheicharter.org">Student Absence Email</a></li>
                         <li>Front Office:<br><a href="tel:+18088750700">808-875-0700</a></li>
-                        <li><a href="https://kiheicharter.org/sites/default/files/2024-01/KCS%20Lunch%20Menu%202024%20FEB.pdf" target="_blank">KCS Lunch Menu Feb 2024</a><p id="lunch-menu-disclaimer"> This Institution is an Equal Opportunity Provider</p></li>
+                        <li>KCS Directors:<br><a href="mailto:lbaldridge@kiheicharter.org">lbaldridge@kiheicharter.org</a></br>
+                            <br><a href="mailto:ppruett@kiheicharter.org">ppruett@kiheicharter.org</a></br>
+                            <br><a href="mailto:efederoff@kiheicharter.org">efederoff@kiheicharter.org</a></br></li>
+                        <li><a href="https://firebasestorage.googleapis.com/v0/b/kcs-website-e2909.appspot.com/o/lunchmenus%2FKCS%20Lunch%20Menu%202024%20SEP.pdf?alt=media&token=112b6800-114b-4aa8-a50d-b99e5d6ccc26" target="_blank">KCS Lunch Menu Sep 2024</a><p id="lunch-menu-disclaimer"> This Institution is an Equal Opportunity Provider</p></li>
+                        <li><a href="https://pskcs.org/public/">Powerschool</a></li>
+                        <li><a href="https://clever.com/oauth/authorize?channel=clever&client_id=4c63c1cf623dce82caac&confirmed=true&district_id=61e1c17f8a11e68fa9f5ce13&redirect_uri=https%3A%2F%2Fclever.com%2Fin%2Fauth_callback&response_type=code&state=14f70dbfca8ec93e440d3b24db4de621e92faf3dffff86cd8aae275e1649b7b6">Clever</a></li>
                     </ul>
                 </div>
             </div>
@@ -69,18 +83,21 @@
                 <div class="archived_announcement_container slideUp" animated="true">
                     <h4>Archived Announcements</h4>
                         <ul>
+                            <li><a href="" target="_blank">August 2024</a></li>
+                            <li><a href="" target="_blank">May 2024</a></li>
+                            <li><a href="" target="_blank">April 2024</a></li>
+                            <li><a href="" target="_blank">March 2024</a></li>
+                            <li><a href="" target="_blank">February 2024</a></li>
                             <li><a href="" target="_blank">January 2024</a></li>
-                            <li><a href="" target="_blank">December 2023</a></li>
-                            <li><a href="" target="_blank">November 2023</a></li>
-                            <li><a href="" target="_blank">October 2023</a></li>
-                            <li><a href="" target="_blank">September 2023</a></li>
-                            <li><a href="" target="_blank">August 2023</a></li>
                         </ul>
                 </div>
             </div>
         </div>
-            
+
+    </div>
+        
 </section>
+<div class="waves"></div>
 <div id="footer"></div>
 <script src="../index.js"></script>
 </body>

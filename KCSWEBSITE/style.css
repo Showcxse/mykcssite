@@ -15,6 +15,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     font-size: 0.938rem;
@@ -43,7 +47,88 @@ a {
 .pdf_container {
     padding: 3.5rem;
     height: 1000px;
+    width: 100%;
 }
+
+.pdf_container_board {
+    padding: 3.5rem;
+    height: 100%;
+    width: 100%;
+}
+
+.responsive_embed {
+    display: flex;
+    position: relative;
+    padding-bottom: 80%;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.responsive_embed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.upside_down_wave{
+    overflow:hidden;
+    position:relative;
+    width: 100%;
+    height: 250px;
+    background-color: rgb(240, 240, 240);
+    }
+.upside_down_wave::before{ 
+    content:'';
+    font-family:'shape divider from ShapeDividers.com';
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    bottom: -0.1vw;
+    left: -0.1vw;
+    right: -0.1vw;
+    top: -0.1vw; 
+    background-size: 100% 223px;
+    background-position: 50% 0%;  background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.28 2.17" preserveAspectRatio="none"><path d="M0 .5c3.07.55 9.27-.42 16.14 0 6.88.4 13.75.57 19.14-.11V0H0z" fill="%232479d4"/><path d="M0 1c3.17.8 7.29-.38 10.04-.55 2.75-.17 9.25 1.47 12.67 1.3 3.43-.17 4.65-.84 7.05-.87 2.4-.02 5.52.88 5.52.88V0H0z" opacity=".5" fill="%232479d4"/><path d="M0 1.85c2.56-.83 7.68-.3 11.79-.42 4.1-.12 6.86-.61 9.58-.28 2.73.33 5.61 1.17 8.61 1 3-.19 4.73-.82 5.3-.84V.1H0z" opacity=".5" fill="%232479d4"/></svg>'); 
+}
+    
+@media (min-width:2100px) {
+    .upside_down_wave::before{
+    background-size: 100% calc(2vw + 223px);
+    }
+}
+
+.waves {
+overflow:hidden;
+position:relative;
+height: 250px;
+width: 100%;
+}
+.waves::before{ 
+content:'';
+font-family:'shape divider from ShapeDividers.com';
+position: absolute;
+z-index: 3;
+pointer-events: none;
+background-repeat: no-repeat;
+bottom: -0.1vw;
+left: -0.1vw;
+right: -0.1vw;
+top: -0.1vw; 
+background-size: 100% 223px;
+background-position: 50% 100%;  background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.28 2.17" preserveAspectRatio="none"><path d="M35.28 1.67c-3.07-.55-9.27.41-16.15 0-6.87-.4-13.74-.58-19.13.1v.4h35.28z" fill="%232479d4"/><path d="M35.28 1.16c-3.17-.8-7.3.4-10.04.56-2.76.17-9.25-1.47-12.68-1.3-3.42.16-4.64.84-7.04.86C3.12 1.31 0 .4 0 .4v1.77h35.28z" opacity=".5" fill="%232479d4"/><path d="M35.28.31c-2.57.84-7.68.3-11.8.43-4.1.12-6.85.61-9.57.28C11.18.69 8.3-.16 5.3.02 2.3.22.57.85 0 .87v1.2h35.28z" opacity=".5" fill="%232479d4"/></svg>'); 
+}
+
+@media (min-width:2100px){
+.waves::before{
+background-size: 100% calc(2vw + 223px);
+}
+}
+ 
 
 .admin_panel_top {
     display: flex;
@@ -522,11 +607,20 @@ textarea, select, input[type="file"] {
     border-radius: 8px;
 }
 
-.resource_wrapper {
-    padding: 2.4rem;
+.announcement_wrapper {
     display: flex;
-    justify-content: space-around;
-    gap: 3rem;
+    gap: 1rem;
+}
+
+.sidebar_right {
+    flex: 1;
+    width: 325px;
+    background-color: var(--white-color);
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    margin-bottom: 40px;
+    border-bottom-left-radius: 8px;
+    height: 100%;
 }
 
 /*Wide card style used in a lot of pages */
@@ -625,12 +719,41 @@ textarea, select, input[type="file"] {
     display: flex;
     justify-content: space-around;
     gap: 4rem;
-    margin: 2rem;
-    padding-top: 2rem;
+    margin: 1.5rem;
+}
+
+.news_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    padding: 2rem;
+    margin: 0 auto;
+    gap: 1rem;
+    justify-items: center;
 }
 
  /*Media queries to handle responsiveness for mobile users */
 @media screen and (max-width: 600px) {
+
+    .pdf_container {
+        padding: 0;
+    }
+
+.pdf_container_board {
+    padding: 0;
+}
+
+    .responsive_embed {
+        padding-bottom: 200%;
+    }
+
+    .responsive_embed embed {
+        width: 100%;
+        height: 60%;
+        transform: scale(0.9);
+        transform-origin: top left;
+    }
+
     .container, .content_container {
         margin-inline: 1rem;
     }
@@ -694,17 +817,21 @@ textarea, select, input[type="file"] {
     .admin_tool_container {
         grid-template-columns: 1fr;
     }
-
- }
+}
 /*Media queries for better responsiveness on smaller screens and mobile users */
- @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .contact_container {
         flex-direction: column;
     }
-    .resource_wrapper {
+    .announcement_wrapper {
         flex-direction: column;
-        padding: 1.2rem;
+        align-items: center;
     }
+
+    .sidebar_right {
+        border-radius: 10px;
+    }
+
 
     .footer_container {
         flex-direction: column;
@@ -758,12 +885,11 @@ textarea, select, input[type="file"] {
     .sign_in {
         flex-direction: column;
     }
-
-
 }
+
     /*Home page card responsiveness for medium sized screens */
 @media screen and (min-width: 768px) {
-    .about_card_container {
+    .about_card_container, .course_card_container {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -771,10 +897,27 @@ textarea, select, input[type="file"] {
         grid-column: span 2;
     }
 
+    .course_card:last-child {
+        grid-column: span 2;
+        justify-self: center;
+    }
+
     .login_container {
         padding: 3.8rem
     }
+}
 
+@media screen and (max-width: 1178px) {
+    .news_grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .news_grid {
+        grid-template-columns: 1fr;
+    }
 }
 
  /*Sitewide styles for better responsiveness on larger screens */
@@ -782,6 +925,8 @@ textarea, select, input[type="file"] {
     .container {
         margin-inline: auto;
     }
+
+
     /*These nav styles are very important for its responsiveness and functionality on all screens */
     .nav {
         height: calc(var(--header-height) + 2rem);
@@ -859,11 +1004,11 @@ textarea, select, input[type="file"] {
         padding-top: calc(var(--header-height) + 2rem) !important;
     }
 
-    .about_card_container {
+    .about_card_container, .course_card_container {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .about_card:last-child {
+    .about_card:last-child, .course_card:last-child {
         grid-column: unset;
     }
 
@@ -958,7 +1103,7 @@ textarea, select, input[type="file"] {
     align-items: center;
 }
 
-.about_header {
+.about_section h2 {
     font-size: 3rem;
     margin-top: 3.2rem;
     position: relative;
@@ -1015,7 +1160,14 @@ textarea, select, input[type="file"] {
     justify-content: center;
     align-items: center;
     gap: 2.75rem;
-    margin-inline: 4rem;
+}
+
+.academic_container h2, .academic_container i, .quote {
+    color: var(--white-color);
+}
+
+#academic-section {
+    background: linear-gradient(180deg, var(--blue-color), var(--light-blue-color));
 }
 
 .academic_container i {
@@ -1028,7 +1180,7 @@ textarea, select, input[type="file"] {
 }
 
 .academic_text {
-    color: #000;
+    color: var(--white-color);
     word-wrap: break-word;
     font-size: 1.2rem;
     margin: auto 10%;
@@ -1038,6 +1190,169 @@ textarea, select, input[type="file"] {
     margin-top: 40px;
     margin-bottom: 120px;
     width: 250px;
+}
+
+.news_section .btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 60%;
+}
+
+.news_wrapper {
+    position: relative;
+    width: 275px;
+    height: 325px;
+    margin: 1.6rem;
+}
+
+.news_wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.news_wrapper:hover::before {
+    opacity: 0.7;
+}
+
+.news_wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.news_wrapper h4 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white-color);
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    line-height: 1.4;
+    transition: all 0.3s ease-in-out;
+    padding: 0 10px;
+    z-index: 4;
+}
+
+.news_wrapper:hover img {
+    opacity: 0.7;
+}
+
+.news_wrapper:hover h4 {
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+
+.news_wrapper:hover h4:hover {
+    text-decoration: underline;
+}
+
+.news_section {
+    padding-top: 3.2rem;
+    background: linear-gradient(to bottom, var(--light-blue-color), var(--darker-blue-color));
+}
+
+.news_section h2 {
+    font-size: 2.6rem;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.course_card_container {
+    display: grid;
+    gap: 2rem
+}
+
+.course_card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.course_card:hover {
+    border: 1px solid var(--white-color);
+    transition: border 0.4s ease-in-out;
+}
+
+.course_card h3 {
+    font-size: 1.6rem;
+    white-space: nowrap;
+    text-align: center;
+    margin-bottom: 0.6rem;
+    position: relative;
+}
+
+.course_card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--white-color);
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.course_card:hover h3::after {
+    width: 100%;
+}
+
+.course_card h3, .course_card p {
+    color: var(--white-color);
+    padding: 1rem;
+}
+
+.course_card > .btn, .course_card p {
+    opacity: 0;
+    transition-delay: 0.2s;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#elem-card {
+    background-image: linear-gradient(rgba(31, 70, 194, 0.8), rgba(31, 70, 194, 0.8)), url(./assets/Hula\ Hoop.jpg);    
+}
+
+#mid-card {
+    background-image: linear-gradient(rgba(31, 70, 194, 0.8), rgba(31, 70, 194, 0.8)), url(./assets/MS-candid-edit-2.jpg);    
+}
+
+#high-card {
+    background-image: linear-gradient(rgba(31, 70, 194, 0.8), rgba(31, 70, 194, 0.8)), url(./assets/New\ Banner.jpg);    
+}
+
+.course_card:hover p,
+.course_card:hover > .btn {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    transition-delay: 0.2;
+    color: var(--white-color);
 }
 
 .footer_section {
@@ -1141,7 +1456,8 @@ textarea, select, input[type="file"] {
 }
 
 .announcement_img {
-    max-width: 380px;
+    align-self: center;
+    width: 300px;
     max-height: 380px;
     border-radius: 8px;
 
@@ -1150,6 +1466,8 @@ textarea, select, input[type="file"] {
 .announcement_col {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+    margin-bottom: 2rem;
 }
 
 .announcement_col h4 {
@@ -1159,7 +1477,7 @@ textarea, select, input[type="file"] {
 
 .announcement_col li {
     font-size: 1.2rem;
-    margin-top: 16px;
+    margin-top: 24px;
 }
 
 .announcement_col li a:hover {
@@ -1216,12 +1534,26 @@ textarea, select, input[type="file"] {
 }
 
 
-.contact_container {
+.contact_container, .archived_announcement_container {
     display: flex;
     text-align: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 2rem;
+}
+
+.archived_announcement_container h4 {
+    position: relative;
+}
+
+.archived_announcement_container h4::before {
+    content: '';
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    top: -25px;
+    left: 0;
+    background-color: var(--darker-blue-color);
 }
 
 .contact_container p {
@@ -1242,17 +1574,13 @@ textarea, select, input[type="file"] {
     opacity: 0.6;
 }
 
-
-.archived_announcement_container {
-    text-align: center;
-}
-
 .announcement_card_container {
-    padding: 4rem;
+    padding-top: 2rem;
     display: grid;
     grid-template-rows: auto auto; 
     gap: 20px;
-    justify-content: center;    
+    justify-content: center;
+    flex: 3;
 }
 
 .announcement_card {
@@ -1268,6 +1596,12 @@ textarea, select, input[type="file"] {
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.announcement_card > a > p {
+    color: #000;
+    text-align: center;
 }
 
 .announcement_card:hover {
@@ -1278,8 +1612,9 @@ textarea, select, input[type="file"] {
 
 .large_announcement_card {
     grid-row: span 2;
-    height: 480px;
+    height: 500px;
     max-width: 340px;
+    align-self: start;
 }
 
 .large_announcement_card h4 {
@@ -1287,14 +1622,24 @@ textarea, select, input[type="file"] {
 }
 
 .small_announcement_card {
-    height: 240px;
+    height: 335px;
+    align-self: start;
+}
+
+.announcement_card span {
+    align-self: flex-start;
 }
 
 .staff_card_container, .card_container {
     display: flex;
     padding: 4rem;
-    justify-content: space-eve;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+.staff_card_container {
+    gap: 3rem;
+    justify-content: space-between;
 }
 
 .support_staff_container {
@@ -1303,7 +1648,7 @@ textarea, select, input[type="file"] {
 
 .staff_card {
     height: 350px;
-    width: 350px;
+    width: 280px;
 }
 
 .card {
@@ -1378,13 +1723,14 @@ textarea, select, input[type="file"] {
 
 .staff_card img {
     border-radius: 8px;
-    width: 220px;
+    width: 200px;
     height: 275px;
 }
 
 .small_staff_card img {
     border-radius: 8px;
-    width: 140px;
+    width: 160px;
+    height: 200px;
 }
 
 .staff_card h3, .small_staff_card h3 {
