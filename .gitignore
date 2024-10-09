@@ -65,4 +65,5 @@ node_modules/
 # dotenv environment variables file
 .env
 
-firebase-setup.js
+KCSWEBSITE/firebase-setup.js
+KCSWEBSITE/auth.js
